@@ -10,7 +10,8 @@ function EventScreen() {
                         1
                     </div>
                     <div className="flex w-1/3 justify-end bg-red-400">
-                        <Gmap/>
+                        {/* <Gma
+                        2p/> */}
                     </div>
                 </div>
             </div>
