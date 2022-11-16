@@ -5,7 +5,7 @@ function Footer() {
     return (
         <section>
             <footer className="bg-gradient-to-r from-cyan-50 to-blue-300 mt-8 relative">
-                <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-8">
+                <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                         <div>
                             <img src="#" className="mr-5 h-6 sm:h-9" alt="logo" />

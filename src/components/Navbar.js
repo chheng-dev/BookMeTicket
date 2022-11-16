@@ -1,15 +1,16 @@
 import React from "react";
 import Logo from '../images/logo.jpg';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <nav className="bg-white shadow-lg p-4  top-0 w-full block z-10">
-            <div className="container flex flex-wrap justify-between items-center mx-auto">
+            <div className="container-xl flex flex-wrap justify-between items-center mx-auto">
                 <ul>
                     {/* <Link to="/"> */}
                     <div className="flex items-center">
-                        <img src={Logo} alt="Logo" />
-
+                        <Link to="/">
+                            <img src={Logo} alt="Logo" />
+                        </Link>
                         <div className="shadow-none ml-8 w-full border-none border border-l-gray h-full m-auto">
                             <div className="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
                                 <div className="md:flex">

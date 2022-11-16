@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from "antd";
 import '../index.css'
 import bgCover1 from "../images/bg-gd.jpg"
+import {Link} from "react-router-dom"
 
 function Header(){
         return (
@@ -20,10 +21,11 @@ function Header(){
                             <div className="mr-auto place-self-center lg:col-span-7">
                                 <h1 className="max-w-2xl md:mb-4 md:text-5xl font-extrabold tracking-tight leading-none xl:text-6xl dark:text-white pt-18 text-2xl p-4">Disph1. Bootstrap headinglay 4</h1>
                                 <p className="md:max-w-2xl md:mb-8 font-base text-white lg:mb-8 md:text-lg lg:text-md p-4">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
-
-                                <button className="bg-blue-400 hover:bg-blue-700 text-white ml-4 py-2 px-12 rounded">
-                                    Browse Event
-                                </button>
+                                <Link to="/events">
+                                    <button className="bg-blue-400 hover:bg-blue-700 text-white ml-4 py-2 px-12 rounded">
+                                        Browse Event
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
