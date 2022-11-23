@@ -8,9 +8,9 @@ function Navbar() {
                 <ul>
                     {/* <Link to="/"> */}
                     <div className="flex items-center">
-                        <Link to="/">
-                            <img src={Logo} alt="Logo" />
-                        </Link>
+                        {/* <Link to="/"> */}
+                            <img href="/" src={Logo} alt="Logo" />
+                        {/* </Link> */}
                         <div className="shadow-none ml-8 w-full border-none border border-l-gray h-full m-auto">
                             <div className="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
                                 <div className="md:flex">

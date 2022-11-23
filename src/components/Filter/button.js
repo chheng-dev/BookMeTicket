@@ -99,11 +99,11 @@ function Filter() {
 
             </div>
             <div className={openTab === 1 ? "block" : "hidden"}>
-                <div className="flex gap-4 mt-3" >
+                <div className="flex gap-6 mt-3" >
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://deviniti.com/app/uploads/2021/10/09-20_DM-8186_EVENTS_01_MAIN-2-1024x682.png"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -137,9 +137,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://guidebook.com/mobile-guides/wp-content/uploads/2021/01/event-planning6-e1576288302856-edited.jpg"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -173,9 +173,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://images.squarespace-cdn.com/content/v1/5aadc54285ede1bd72181a3a/1521339647830-LKHTH62ZRY5TCGVCW81P/shutterstock_538256848.jpg?format=1500w"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -209,9 +209,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://www.specialevents.com/sites/specialevents.com/files/styles/article_featured_retina/public/88A4947%201_2.jpg?itok=CHxwyji-"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -245,11 +245,11 @@ function Filter() {
                     </div>
                     
                 </div>
-                <div className="flex gap-4 mt-3" >
+                <div className="flex gap-6 mt-3" >
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://d2evkimvhatqav.cloudfront.net/images/_1440x1080_crop_center-center_none/speaker-training-education-conference-46290858.jpg?v=1658176926,0.5063,0.5188"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -283,9 +283,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://media.slidesgo.com/storage/8857150/leadership-training-event-for-business1626957387.jpg"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -319,9 +319,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://www.academyoflearning.com/wp-content/uploads/2021/08/event_marketing.jpg"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -355,9 +355,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://img.freepik.com/free-vector/music-event-poster-template-with-abstract-shapes_1361-1316.jpg?w=2000"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -395,9 +395,9 @@ function Filter() {
             <div className={openTab === 2 ? "block" : "hidden"}>
                 <div className="flex gap-4 mt-3" >
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://i1.wp.com/www.aseanfootball.org/v3/wp-content/uploads/2022/04/The-Look-Company-FIFA.jpeg?resize=900%2C450&ssl=1"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -431,9 +431,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://d12eu00glpdtk2.cloudfront.net/public/images/events/kidzania-football-cup-2022-registration/KidZania-Doha-Football-Cup-2022.jpg"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -467,9 +467,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2022-02/FIFA%20Club%20World%20Cup%20trophy%20020422.jpg?itok=5pZc3sgR"
                                 alt="thumbnail"
                                 loading="lazy"
@@ -503,9 +503,9 @@ function Filter() {
                     </div>
 
                     <div className="flex w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md rounded-xl">
+                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
-                                className="rounded-t-xl h-48 w-full"
+                                className=" h-48 w-full"
                                 src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
                                 alt="thumbnail"
                                 loading="lazy"
