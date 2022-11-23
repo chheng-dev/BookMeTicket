@@ -1,19 +1,19 @@
 import React from "react";
 import Maps from "../Maps";
 import Filter from "../Filter/button"
+import {Link} from "react-router-dom"
 
 
 function EventScreen() {
     return (
-        <div className="w-full h-full overflow-y-hidden event-h-screen">
-            <div class="flex h-screen p-4 ">
-                <div class="overflow-hidden">
+        <div className="overflow-y-hidden event-h-screen">
+            <div class=" flex h-screen p-4 ">
+                <div class="mx-auto overflow-hidden w-screen">
                     <div class="flex h-full gap-4">
                         <main class="flex flex-col w-2/3 overflow-x-hidden overflow-y-auto mb-14">
                             <div class="flex w-full">
                                 <div className="flex w-full justify-start">
                                     <div>
-                                        <Filter />
                                         <div className="flex gap-4">
                                             <div className="flex w-1/3 items-center justify-center mt-5">
                                                 <div className="max-w-sm overflow-hidden rounded-xl bg-white shadow-xl duration-200">
@@ -23,7 +23,9 @@ function EventScreen() {
                                                             <span className="text-xs text-gray-400">11-Mar - 12-Mar</span>
                                                         </div>
                                                         <div className="">
-                                                            <h3 className="text-md text-gray-600">Well, aren't you going uh3</h3>
+                                                            <Link to="/event/1">
+                                                                <h3 className="text-md text-gray-600 hover:text-blue-600 hover:font-bold">Well, aren't you going uh3</h3>
+                                                            </Link>
                                                         </div>
                                                         <div className="flex mt-1">
 
@@ -446,7 +448,7 @@ function EventScreen() {
                                 </div>
                             </div>
                         </main>
-                        <nav class="flex w-1/3 h-full">
+                        <nav class="flex w-1/3 h-full bg-red-400">
                             <div class="w-full flex">
                                 <div class="w-full h-full flex items-center justify-center text-gray-900">
                                     <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6386945005797!2d104.90384381533713!3d11.577738247055695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095132315da61b%3A0x3c91a9e3aeb49ae9!2sBookMeBus!5e0!3m2!1sen!2skh!4v1668570367336!5m2!1sen!2skh" frameborder="0" style={{ border: 0 }} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
