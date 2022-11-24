@@ -9,8 +9,10 @@ function Filter() {
                     type="button"
                     className="
                 rounded
-                px-6
-                py-2        
+                px-4
+                py-1
+                md:px-6
+                md:py-2        
                 border border-gray-300
                 text-gray-600
                 font-medium
@@ -31,8 +33,10 @@ function Filter() {
                     type="button"
                     className="
             rounded
-                px-6
-                py-2
+                 px-4
+                py-1
+                md:px-6
+                md:py-2    
                 border border-gray-300
                 text-gray-600
                 font-medium
@@ -54,8 +58,10 @@ function Filter() {
                     type="button"
                     className="
                 rounded
-                px-6
-                py-2
+                 px-4
+                py-1
+                md:px-6
+                md:py-2    
                 border border-gray-300
                 text-gray-600
                 font-medium
@@ -77,8 +83,10 @@ function Filter() {
                     type="button"
                     className="
                 rounded
-                px-6
-                py-2
+                 px-4
+                py-1
+                md:px-6
+                md:py-2    
                 border border-gray-300
                 text-gray-600
                 font-medium
@@ -99,8 +107,8 @@ function Filter() {
 
             </div>
             <div className={openTab === 1 ? "block" : "hidden"}>
-                <div className="flex gap-6 mt-3" >
-                    <div className="flex w-1/4">
+                <div className="lg:flex grid grid-cols-1 sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 md:gap-4 gap-6 mt-3" >
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -114,7 +122,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-500">
                                     <span className="flex">
@@ -136,7 +144,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -150,7 +158,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -172,7 +180,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -186,7 +194,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -208,7 +216,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -222,7 +230,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -245,8 +253,8 @@ function Filter() {
                     </div>
                     
                 </div>
-                <div className="flex gap-6 mt-3" >
-                    <div className="flex w-1/4">
+                {/* <div className="lg:flex grid grid-cols-1 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 md:gap-4 gap-6 mt-3" >
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -260,7 +268,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-500">
                                     <span className="flex">
@@ -282,7 +290,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -296,7 +304,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -318,7 +326,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -332,7 +340,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -354,7 +362,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -368,7 +376,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -390,11 +398,11 @@ function Filter() {
                         </div>
                     </div>
                     
-                </div>
+                </div> */}
             </div>
             <div className={openTab === 2 ? "block" : "hidden"}>
-                <div className="flex gap-4 mt-3" >
-                    <div className="flex w-1/4">
+                <div className="md:flex grid grid-cols-1 gap-6 mt-3" >
+                    <div className="md:flex md:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -408,7 +416,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-500">
                                     <span className="flex">
@@ -430,7 +438,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="md:flex md:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -444,7 +452,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -466,7 +474,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="md:flex md:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -480,7 +488,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -502,7 +510,7 @@ function Filter() {
                         </div>
                     </div>
 
-                    <div className="flex w-1/4">
+                    <div className="md:flex md:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
                             <img
                                 className=" h-48 w-full"
@@ -516,7 +524,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="blog/detail" className="text-gray-700">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="blog/detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
