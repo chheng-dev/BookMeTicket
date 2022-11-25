@@ -1,466 +1,413 @@
-import React from "react";
+import React,{useState} from "react";
 // import Maps from "../Maps";
 // import Filter from "../Filter/button"
 import { Link } from "react-router-dom"
-// import "../../index.css"
+
 
 
 function EventScreen() {
+    const [openTab, setOpenTab] = useState(1)
     return (
         <div className="lg:overflow-y-hidden lg:event-h-screen">
             <div className="container lg:event-h-screen">
                 <div className="p-4 md:p-0 md:overflow-hidden w-screen lg:event-h-screen ">
                     <div className="lg:flex grid grid-cols-1 md:grid md:grid-cols-1 h-full gap-4 event-h-screen ">
                         <div className="md:p-4 lg:flex lg:w-2/3 lg:overflow-x-hidden lg:overflow-y-auto lg:mb-16 lg:h-screen">
-                            <div className="w-full h-full">
-                                <div className="lg:grid lg:grid-cols-3 grid grid-cols-1 md:grid md:grid-cols-3 gap-4">
-                                    <div className="items-center justify-center mt-5">
-                                        <div className="lg:overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://s1.ticketm.net/dam/a/087/d26e3794-731e-478c-b0ba-4b4648bd0087_1772721_RETINA_PORTRAIT_16_9.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
-                                                    >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div className="w-full">
+                                <div className="inline-flex mb-4" role="group">
+                                    <button
+                                        type="button"
+                                        className="
+                rounded
+                px-4
+                py-1
+                md:px-6
+                md:py-2        
+                border border-gray-300
+                text-gray-600
+                font-medium
+                text-xs
+                leading-tight
+                uppercase
+                hover:bg-black hover:bg-opacity-5
+                focus:outline-none focus:ring-0
+                transition
+                duration-150
+                ease-in-out
+            "
+                                        onClick={() => setOpenTab(1)}
+                                    >
+                                        Date
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="
+            rounded
+                 px-4
+                py-1
+                md:px-6
+                md:py-2    
+                border border-gray-300
+                text-gray-600
+                font-medium
+                text-xs
+                leading-tight
+                uppercase
+                hover:bg-black hover:bg-opacity-5
+                focus:outline-none focus:ring-0
+                transition
+                duration-150
+                ease-in-out
+                ml-2
+            "
+                                        onClick={() => setOpenTab(2)}
+                                    >
+                                        Price
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="
+                rounded
+                 px-4
+                py-1
+                md:px-6
+                md:py-2    
+                border border-gray-300
+                text-gray-600
+                font-medium
+                text-xs
+                leading-tight
+                uppercase
+                hover:bg-black hover:bg-opacity-5
+                focus:outline-none focus:ring-0
+                transition
+                duration-150
+                ease-in-out
+                ml-2
+            "
+                                        onClick={() => setOpenTab(3)}
+                                    >
+                                        Keyword
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="
+                rounded
+                 px-4
+                py-1
+                md:px-6
+                md:py-2    
+                border border-gray-300
+                text-gray-600
+                font-medium
+                text-xs
+                leading-tight
+                uppercase
+                hover:bg-black hover:bg-opacity-5
+                focus:outline-none focus:ring-0
+                transition
+                duration-150
+                ease-in-out
+                ml-2
+            "
+                                        onClick={() => setOpenTab(4)}
+                                    >
+                                        More Filters
+                                    </button>
 
-                                    </div>
-
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://s1.ticketm.net/dam/a/729/c886aac1-6740-4f40-a8fa-86f70d168729_1596801_TABLET_LANDSCAPE_LARGE_16_9.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
-                                                    >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {/* <div className="mt-3 p-4">
-                                        <span>$ 300.44</span>
-                                    </div> */}
-                                        </div>
-
-                                    </div>
-
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://www.thelist.com/img/gallery/2021-music-festivals-you-need-to-have-on-your-radar/l-intro-1628720166.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
-                                                    >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
                                 </div>
+                                <div className={openTab === 1 ? "block" : "hidden"}>
+                                    <div className="lg:flex grid grid-cols-1 sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 md:gap-4 gap-6 mt-3" >
+                                        <div className="lg:flex lg:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://deviniti.com/app/uploads/2021/10/09-20_DM-8186_EVENTS_01_MAIN-2-1024x682.png"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
 
-                                <div className="lg:grid lg:grid-cols-3 grid grid-cols-1 md:grid md:grid-cols-3 gap-4">
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://s1.ticketm.net/dam/a/087/d26e3794-731e-478c-b0ba-4b4648bd0087_1772721_RETINA_PORTRAIT_16_9.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-400">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                                     >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
+                                                        <a href="/event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-500">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-500">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex  my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div className="lg:flex lg:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://guidebook.com/mobile-guides/wp-content/uploads/2021/01/event-planning6-e1576288302856-edited.jpg"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
+
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-500">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
+                                                    >
+                                                        <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-400">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-400">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div className="lg:flex lg:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://images.squarespace-cdn.com/content/v1/5aadc54285ede1bd72181a3a/1521339647830-LKHTH62ZRY5TCGVCW81P/shutterstock_538256848.jpg?format=1500w"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
+
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-500">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
+                                                    >
+                                                        <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-400">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-400">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div className="lg:flex lg:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://www.specialevents.com/sites/specialevents.com/files/styles/article_featured_retina/public/88A4947%201_2.jpg?itok=CHxwyji-"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
+
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-500">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
+                                                    >
+                                                        <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-400">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-400">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
 
                                     </div>
 
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://s1.ticketm.net/dam/a/729/c886aac1-6740-4f40-a8fa-86f70d168729_1596801_TABLET_LANDSCAPE_LARGE_16_9.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
-                                                    >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {/* <div className="mt-3 p-4">
-                                        <span>$ 300.44</span>
-                                    </div> */}
-                                        </div>
-
-                                    </div>
-
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://www.thelist.com/img/gallery/2021-music-festivals-you-need-to-have-on-your-radar/l-intro-1628720166.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
-                                                    >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
                                 </div>
+                                <div className={openTab === 2 ? "block" : "hidden"}>
+                                    <div className="md:flex grid grid-cols-1 gap-6 mt-3" >
+                                        <div className="md:flex md:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://i1.wp.com/www.aseanfootball.org/v3/wp-content/uploads/2022/04/The-Look-Company-FIFA.jpeg?resize=900%2C450&ssl=1"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
 
-                                <div className="lg:grid lg:grid-cols-3 grid grid-cols-1 md:grid md:grid-cols-3 gap-4">
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://s1.ticketm.net/dam/a/087/d26e3794-731e-478c-b0ba-4b4648bd0087_1772721_RETINA_PORTRAIT_16_9.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-400">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                                     >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
+                                                        <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-500">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-500">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
 
-                                    </div>
+                                        <div className="md:flex md:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://d12eu00glpdtk2.cloudfront.net/public/images/events/kidzania-football-cup-2022-registration/KidZania-Doha-Football-Cup-2022.jpg"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
 
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://s1.ticketm.net/dam/a/729/c886aac1-6740-4f40-a8fa-86f70d168729_1596801_TABLET_LANDSCAPE_LARGE_16_9.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-500">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                                     >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
+                                                        <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-400">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-400">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
+                                            </div>
                                         </div>
 
-                                    </div>
+                                        <div className="md:flex md:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2022-02/FIFA%20Club%20World%20Cup%20trophy%20020422.jpg?itok=5pZc3sgR"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
 
-                                    <div className=" items-center justify-center mt-5">
-                                        <div className=" overflow-hidden bg-white shadow-xl duration-200">
-                                            <img src="https://www.thelist.com/img/gallery/2021-music-festivals-you-need-to-have-on-your-radar/l-intro-1628720166.jpg" alt="plant" className="lg:card-image-event md:md-card-image-even" />
-                                            <div className="p-4 md:p-0">
-                                                <div className="lg:px-4 lg:pt-2 md:px-2 md:py-0">
-                                                    <div className="flex">
-                                                        {/* <svg t="1669278973564" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2847" width="16" height="16"><path d="M935.385 1024H88.615c-32.63 0-59.077-26.447-59.077-59.077V157.54c0-32.63 26.447-59.077 59.077-59.077h157.539v-78.77C246.154 8.822 254.976 0 265.846 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h334.77v-78.77C679.385 8.822 688.207 0 699.077 0h59.077c10.87 0 19.692 8.822 19.692 19.692v78.77h157.539c32.63 0 59.077 26.446 59.077 59.076v807.385c0 32.63-26.447 59.077-59.077 59.077z m0-846.77c0-10.87-8.823-19.692-19.693-19.692H777.846v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077h-334.77v59.077c0 10.87-8.822 19.693-19.692 19.693h-59.077c-10.87 0-19.692-8.822-19.692-19.693v-59.077H108.308c-10.87 0-19.693 8.823-19.693 19.693v137.846h846.77V177.23z m0 196.924H88.615V945.23c0 10.87 8.823 19.692 19.693 19.692h807.384c10.87 0 19.693-8.822 19.693-19.692V374.154zM817.23 846.769h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z m-256 216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.823 19.692 19.693v78.769c0 10.87-8.822 19.692-19.692 19.692z m0-216.615h-78.77c-10.87 0-19.692-8.822-19.692-19.692v-78.77c0-10.87 8.822-19.692 19.693-19.692h78.769c10.87 0 19.692 8.822 19.692 19.692v78.77c0 10.87-8.822 19.692-19.692 19.692z" p-id="2848" fill="#8a8a8a"></path></svg>                                                        */}
-                                                         <span className="text-md ml-1 text-gray-400">11-Mar - 12-Mar</span>
-                                                    </div>
-                                                    <div className="pt-0.5">
-                                                        <Link to="/event/1">
-                                                            <h3 className="text-gray-600 md:text-sm text-xl font-semibold">Well, aren't you going uh3</h3>
-                                                        </Link>
-                                                    </div>
-                                                    <div className="flex">
-                                                    {/* <svg t="1669279063762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4061" width="20" height="20"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="4062" fill="#8a8a8a"></path></svg> */}
-                                                        <span className="text-lg -mt-1 md:text-xs text-gray-400 ml-0.5">
-                                                            BookMeBus, Phnom Penh
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="lg:text-xl text-lg py-2 md:p-0 md:px-2 lg:px-4 text-red-800">
-                                                    <span className="md:text-sm ">$10.00</span>
-                                                </div>
-                                                <div className="border-t border-gray-300 mt-1  py-3 md:p-3 ">
-                                                    <div
-                                                        className="flex items-center space-x-3 w-full"
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-500">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                                     >
-                                                        <img
-                                                            className="object-cover w-14 h-14 border-2 border-green-400 rounded-full "
-                                                            src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                                                            alt="profile users"
-                                                            loading="lazy"
-                                                        />
-                                                        <div className="">
-                                                            <span className="text-sm font-semibold tracking-wide text-gray-600">
-                                                                Author
-                                                            </span>
-                                                            <p className="text-xs tracking-wider text-gray-600">
-                                                                2 Hours ago
-                                                            </p>
+                                                        <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-400">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-400">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div className="md:flex md:w-1/4">
+                                            <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl ">
+                                                <img
+                                                    className=" h-48 w-full"
+                                                    src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
+                                                    alt="thumbnail"
+                                                    loading="lazy"
+                                                />
+
+                                                <div className="py-2 px-4">
+                                                    <span className="text-xs text-gray-500">11 Nov - 12 Nov</span>
+                                                    <h1
+                                                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
+                                                    >
+                                                        <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                                    </h1>
+                                                    <p className="text-xs text-gray-400">
+                                                        <span className="flex">
+                                                            <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
+                                                            <span className="ml-1">The Desk Flagship - Daun Penh…</span>
+                                                        </span>
+                                                    </p>
+                                                    <div>
+                                                        <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-400">/ Per Ticket</span>
+                                                    </div>
+                                                    <div className="flex my-6">
+                                                        <div className="flex items-center">
+                                                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
+                                                            <span className="text-gray-500 ml-2">Techo Startup Center</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
 
@@ -468,7 +415,7 @@ function EventScreen() {
                                 </div>
                             </div>
                         </div>
-                        <div className="pb-8 p-4 lg:p-0  lg:w-1/3 md:flex md:h-full bg-red-100 h-full">
+                        <div className="pb-8 py-4 lg:p-0  lg:w-1/3 md:flex md:h-full h-full">
                             <div className="w-full h-full">
                                 <div className="w-full h-full">
                                     <div className="w-full h-full flex items-center justify-center text-gray-900">

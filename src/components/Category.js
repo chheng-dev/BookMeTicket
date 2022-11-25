@@ -8,11 +8,11 @@ function Category() {
         <div className="md:container w-full p-4 mx-auto text-black mt-8 pb-8">
             <div className="w-full">
                 <div >
-                <h2 class="mb-4 text-2xl font-bold ">All Categories</h2>
-                    <div class="grid">
-                        <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div class="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                <h2 className="mb-4 text-2xl font-bold ">All Categories</h2>
+                    <div className="grid">
+                        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+                            <div className="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_211" data-name="Group 211" transform="translate(-200 -770)">
                                             <rect id="Rectangle_117" data-name="Rectangle 117" width="48" height="48" rx="24" transform="translate(200 770)" fill="#2ebae2" opacity="0.1" />
@@ -22,13 +22,13 @@ function Category() {
 
                                 </div>
 
-                                <div class="ml-2 mt-4 justify-center">
-                                    <h2 class="text-xs md:font-semibold md:text-sm">Sport</h2>
+                                <div className="ml-2 mt-4 justify-center">
+                                    <h2 className="text-xs md:font-semibold md:text-sm">Sport</h2>
                                 </div>
                             </div>
 
-                            <div class="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div class="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                            <div className="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_212" data-name="Group 212" transform="translate(-455 -770)">
                                             <rect id="Rectangle_119" data-name="Rectangle 119" width="48" height="48" rx="24" transform="translate(455 770)" fill="#f36c33" opacity="0.1" />
@@ -37,13 +37,13 @@ function Category() {
                                     </svg>
                                 </div>
 
-                                <div class="ml-2 mt-4 justify-center">
-                                    <h2 class="text-xs md:font-semibold md:text-sm inline-block align-middle">Concert</h2>
+                                <div className="ml-2 mt-4 justify-center">
+                                    <h2 className="text-xs md:font-semibold md:text-sm inline-block align-middle">Concert</h2>
 
                                 </div>
                             </div>
-                            <div class="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div class="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                            <div className="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_214" data-name="Group 214" transform="translate(-965 -770)">
                                             <rect id="Rectangle_123" data-name="Rectangle 123" width="48" height="48" rx="24" transform="translate(965 770)" fill="#39c38f" opacity="0.1" />
@@ -56,13 +56,13 @@ function Category() {
 
                                 </div>
 
-                                <div class="ml-2 mt-4 justify-center">
-                                    <h2 class="text-xs md:font-semibold md:text-sm">Community Meetups</h2>
+                                <div className="ml-2 mt-4 justify-center">
+                                    <h2 className="text-xs md:font-semibold md:text-sm">Community Meetups</h2>
 
                                 </div>
                             </div>
-                            <div class="flex items-start  bg-white  p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div class="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                            <div className="flex items-start  bg-white  p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_224" data-name="Group 224" transform="translate(-710 -770)">
                                             <g id="Group_213" data-name="Group 213">
@@ -79,8 +79,8 @@ function Category() {
 
                                 </div>
 
-                                <div class="ml-2 md:ml-2 mt-4 justify-center">
-                                    <h2 class="text-xs md:font-semibold md:text-sm">Skill Training</h2>
+                                <div className="ml-2 md:ml-2 mt-4 justify-center">
+                                    <h2 className="text-xs md:font-semibold md:text-sm">Skill Training</h2>
 
                                 </div>
                             </div>

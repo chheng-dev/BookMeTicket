@@ -1,40 +1,46 @@
 import React from 'react';
-import { Carousel } from "antd";
+import { Carousel } from 'antd';
 import '../index.css'
 import bgCover1 from "../images/bg-banner.png"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
-function Header(){
-        return (
-            <section className="w-full h-full">
-                <div className="w-full z-10">
-                    <div className="">
-                        <Carousel autoplay>
-                            <div className="bg-auto sm:bg-cover md:bg-contain lg:bg-auto xl:bg-cover bg-gray-800">
-                                <img src={bgCover1} className="w-full height-bg" alt='bg-cover'/>
-                            </div>
-                        </Carousel>
-                    </div>
-
-                    <div className="w-full absolute bottom-80">
-                        <div className="container m-auto">
-                            <div className="mr-auto place-self-center lg:col-span-7">
-                                <h1 className="max-w-2xl md:mb-4 md:text-5xl font-extrabold tracking-tight leading-none xl:text-6xl dark:text-white pt-18 text-2xl p-4">Disph1. Bootstrap headinglay 4</h1>
-                                <p className="md:max-w-2xl md:mb-8 font-base text-white lg:mb-8 md:text-lg lg:text-md p-4">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
-                                <Link to="/event">
-                                    <button className="bg-primary hover:bg-primary-700 text-white ml-4 py-2 px-12 rounded">
-                                        Browse Event
-                                    </button>
-                                </Link>
+function Header() {
+    return (
+        <section className="w-full h-full scroll-smooth" id='home'>
+            <div class="relative height-bg max-h-screen overflow-hidden">
+                <div class="absolute flex w-full h-full items-center  bg-gray-900 z-50 opacity-50">
+                    <div className='container mx-auto'>
+                        <div class="relative z-19 w-5/6 px-6 py-8 text-white md:py-10 md:w-1/2">
+                            <div>
+                                <h2 class="text-4xl md:text-6xl font-bold text-white">Disph1. Bootstrap headinglay 4</h2>
+                                <span>From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</span>
+                                <div className='mt-4'>
+                                    <Link to="/event">
+                                        <button className="bg-primary hover:bg-primary-700 text-white  py-2 px-12 rounded">
+                                            Browse Event
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="absolute top-0 right-0 block w-full h-screen md:h-full">
+                    <Carousel autoplay>
+                        <div className='w-full h-screen md:full'>
+                            <img alt="Snowy mountain lake" class="object-cover min-w-full h-full" src={bgCover1} />
+                        </div>
+                        <div className='w-full h-screen md:h-full'>
+                            <img alt="Snowy mountain lake" class="object-cover min-w-full h-full" src="https://d3lbfr570u7hdr.cloudfront.net/stadiumastro/media/sa-images/2022/09-september/1/astro-fifa-world-cup-qatar-sports-pack.png?ext=.png" />
+                        </div>
+                    </Carousel>
+                </div>
+            </div>
+        </section>
 
 
-        )
-    
+    )
+
 }
 
 
