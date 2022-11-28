@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../Footer"
-
+import {Link} from "react-router-dom"
 
 function EventDetail() {
     return (
@@ -145,9 +145,9 @@ function EventDetail() {
                                 </div>
                             </div>
                             <div className="w-full my-6">
-                                <a href="./guest-info">
+                                <Link to="/event/guest-info">
                                     <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">Buy Ticket</button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

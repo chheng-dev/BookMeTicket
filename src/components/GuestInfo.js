@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css"
+import {Link } from "react-router-dom"
 
 function GuestInfo() {
     return (
@@ -36,9 +37,9 @@ function GuestInfo() {
                                         <p>By Check out, you have agreed with <span className="text-primaruy-600">terms and condition</span></p>
                                     </div>
                                     <div className="flex space-x-2 justify-center mt-6">
-                                        <a href="./payment">
+                                        <Link to="/payment">
                                             <button type="button" className="w-full inline-block px-6 py-3 bg-primary text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-primary-700 hover:shadow-lg focus:bg-primary-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary active:shadow-lg transition duration-150 ease-in-out">Check out</button>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </form>
                             </div>

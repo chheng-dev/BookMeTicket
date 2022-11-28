@@ -27,14 +27,14 @@ function App() {
       <Routes>
         <Route path='/' element={<HomeScreen />}></Route>
         <Route path='/event' element={<EventScreen />}></Route>
-        <Route path='/event/:eventId' element={<EventDetail />}></Route>
+        <Route path='/event-detail' element={<EventDetail />}></Route>
         <Route path='/test' element={<TestScreen />}></Route>
-        <Route path='event/guest-info' element={<GuestInfo />}></Route>
-        <Route path='event/ticket' element={<Ticket />}></Route>
+        <Route path='/event/guest-info' element={<GuestInfo />}></Route>
+        <Route path='/ticket' element={<Ticket />}></Route>
         <Route path='*' element={<NotFound />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='event/payment' element={<PaymentPage />}></Route>
+        <Route path='/payment' element={<PaymentPage />}></Route>
       </Routes>
       <MobileView>
         <NavbarBottom />

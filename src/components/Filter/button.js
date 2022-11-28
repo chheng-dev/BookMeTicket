@@ -122,7 +122,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-500">
                                     <span className="flex">
@@ -158,7 +158,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -194,7 +194,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -230,7 +230,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -268,7 +268,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-500">
                                     <span className="flex">
@@ -304,7 +304,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -340,7 +340,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -376,7 +376,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -416,7 +416,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-500">
                                     <span className="flex">
@@ -452,7 +452,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -488,7 +488,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">
@@ -524,7 +524,7 @@ function Filter() {
                                 <h1
                                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                                 >
-                                    <a href="event/1" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
+                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
                                 </h1>
                                 <p className="text-xs text-gray-400">
                                     <span className="flex">

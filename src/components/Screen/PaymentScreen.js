@@ -1,7 +1,8 @@
 import React from "react";
 import abaLogo from "../../images/aba.png"
 import creditLogo from "../../images/credit.png"
-import Footer from "../Footer";
+import Footer from "../Footer"; 
+import {Link} from "react-router-dom"
 
 function PaymentPage() {
     return (
@@ -65,9 +66,9 @@ function PaymentPage() {
                                     <h6>By Paynow, you have agreed with <span className="text-primary">terms & condition</span></h6>
                                 </div>
                                 <div className="w-full h-full">
-                                    <a href="./ticket">
+                                    <Link to="/ticket">
                                     <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">Pay Now</button>
-                                    </a>
+                                    </Link>
                                </div>
                             </div>
                         </div>
