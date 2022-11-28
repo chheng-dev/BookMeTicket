@@ -1,25 +1,25 @@
 import React from "react";
 import Footer from "../../Footer"
-
+import {Link} from "react-router-dom"
 
 function EventDetail() {
     return (
         <>
-            <header>
-                <div className="container mx-auto mt-4">
+            <header className="w-full">
+                <div className="container bg-red-300 mx-auto mt-4">
                     <img
-                        className="content-page-detail w-full rounded-t-xl "
+                        className="content-page-detail object-cover w-full md:rounded-t-xl "
                         src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
                         alt="thumbnail"
                         loading="lazy"
                     />
                 </div>
             </header>
-            <div className="container mx-auto mt-4 bg-white">
-                <div className="flex gap-32">
-                    <div className="flex w-2/3 min-h-screen justify-start">
+            <div className="container mx-auto mt-4 p-4 md:p-0 bg-white">
+                <div className="grid grid-cols-1 md:flex lg:flex lg:gap-32">
+                    <div className="md:flex md:w-1/2 lg:flex lg:w-2/3 min-h-screen justify-start">
                         <div>
-                            <h2 className="font-bold text-3xl">
+                            <h2 className="font-bold md:text-3xl text-xl">
                                 SparkMeet “Deep Learning and Khmer Text Recognit
                             </h2>
                             <div className="w-full">
@@ -29,7 +29,7 @@ function EventDetail() {
                                 </span>
                             </div>
                             <div className="my-6">
-                                <h2 className="font-bold text-3xl">
+                                <h2 className="font-bold md:text-3xl text-xl">
                                     About Event
                                 </h2>
                                 <div className="flex gap-6">
@@ -45,7 +45,7 @@ function EventDetail() {
                             </div>
 
                             <div className="my-6">
-                                <h2 className="font-bold text-3xl">
+                                <h2 className="font-bold md:text-3xl text-xl">
                                     Event Locaton
                                 </h2>
                                 <div className="flex">
@@ -54,7 +54,7 @@ function EventDetail() {
                             </div>
 
                             <div className="my-6">
-                                <h2 className="font-bold text-3xl">
+                                <h2 className="font-bold md:text-3xl text-xl">
                                     Description
                                 </h2>
                                 <div className="flex">
@@ -63,64 +63,66 @@ function EventDetail() {
                             </div>
 
                             <div className="my-6">
-                                <h2 className="font-bold text-3xl">
+                                <h2 className="font-bold md:text-3xl text-xl">
                                     What we offer
                                 </h2>
                                 <div className="flex gap-12">
                                     <div className="flex w-1/3">
-                                        <svg t="1669106219486" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
+                                        <svg t="1669106219486" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
                                         <span className="ml-2">Free lunch</span>
                                     </div>
                                     <div className="flex w-1/3">
-                                        <svg t="1669106219486" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
+                                        <svg t="1669106219486" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
                                         <span className="ml-2">JCI merchandise</span>
                                     </div>
                                 </div>
                                 <div className="flex gap-12 ">
                                     <div className="flex w-1/3">
-                                        <svg t="1669106219486" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
-                                        <span className="ml-2">Get certificate after joinned</span>
+
+                                        <svg t="1669106219486" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
+                                        <span className="ml-2">Free lunch</span>
+
                                     </div>
                                     <div className="flex w-1/3">
-                                        <svg t="1669106219486" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
-                                        <span className="ml-2">Lorem ipsum dolor sit amet</span>
+                                        <svg t="1669106219486" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3246" width="16" height="16"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 605.12L277.312 442.176 192 523.648 448 768l384-366.528L746.688 320 448 605.12z" fill="#0C855D" p-id="3247"></path></svg>
+                                        <span className="ml-2">Free lunch</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="my-6">
-                                <h2 className="font-bold text-3xl">
+                                <h2 className="font-bold md:text-3xl text-xl">
                                     Event host by
                                 </h2>
-                                <div class="flex bg-white">
-                                    <div class="flex items-start py-6">
-                                        <img class="w-16 h-16 rounded-full object-cover mr-4 shadow" src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="avatar" />
-                                            <div class="">
-                                                <div class="flex items-center justify-between">
-                                                    <h2 class="text-lg font-semibold text-gray-900 -mt-1">Techo Startup Center </h2>
-                                                </div>
-                                                <p class="mt-3 text-gray-700 text-sm">
+                                <div className="flex bg-white">
+                                    <div className="flex items-start py-6">
+                                        <img className="w-16 h-16 rounded-full object-cover mr-4 shadow" src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="avatar" />
+                                        <div className="">
+                                            <div className="flex items-center justify-between">
+                                                <h2 className="text-lg font-semibold text-gray-900 -mt-1">Techo Startup Center </h2>
+                                            </div>
+                                            <p className="mt-3 text-gray-700 text-sm">
                                                 We are a membership-based nonprofit organization of 200,000 young people ages 18 to 40 in 5,000 communities and more than 100 countries around the world.
-                                                </p>
-                                                <div class="mt-4 flex items-center">
-                                                    <div class="flex text-primary cursor-pointer text-sm mr-3">
-                                                        <span>View Profile</span>
-                                                    </div>
+                                            </p>
+                                            <div className="mt-4 flex items-center">
+                                                <div className="flex text-primary cursor-pointer text-sm mr-3">
+                                                    <span>View Profile</span>
                                                 </div>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    <div className="flex w-1/3 h-full justify-end bg-whiet shadow-xl p-4">
+                    <div className="md:flex md:w-1/2 lg:flex lg:w-1/3 justify-end rounded bg-white shadow-lg md:border-0 md:shadow-xl p-4 h-full">
                         <div className="w-full">
                             <div className="flex gap-4">
-                                <div className="flex w-1/2 justify-start items-center">
+                                <div className="flex w-1/3 justify-start items-center">
                                     <span>Price</span>
                                 </div>
-                                <div className="flex w-1/2 justify-end items-center">
+                                <div className="flex w-2/3 justify-end items-center">
                                     <span className="font-bold text-xl">$68.00 <span className="text-sm font-normal">/ Per Ticket</span></span>
                                 </div>
                             </div>
@@ -143,13 +145,15 @@ function EventDetail() {
                                 </div>
                             </div>
                             <div className="w-full my-6">
-                                <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">Buy Ticket</button>
+                                <Link to="/event/guest-info">
+                                    <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">Buy Ticket</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
 
         </>
     )

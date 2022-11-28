@@ -132,7 +132,7 @@ function UpComming() {
                                 <h1
                                     className="text-md font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
                                 >
-                                    <a href="blog/detail">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
+                                    <a href="event/1">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
                                 </h1>
                             </div>
                             <div className="flex flex-row items-end h-full w-full px-4 mt-4">
@@ -218,7 +218,7 @@ function UpComming() {
                                 <h1
                                     className="text-md font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
                                 >
-                                    <a href="blog/detail">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
+                                    <a href="event/1">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
                                 </h1>
                             </div>
                             <div className="flex flex-row items-end h-full w-full px-4 mt-4">
@@ -305,7 +305,7 @@ function UpComming() {
                                 <h1
                                     className="text-md font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
                                 >
-                                    <a href="blog/detail">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
+                                    <a href="event/1">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
                                 </h1>
                             </div>
                             <div className="flex flex-row items-end h-full w-full px-4 mt-4">
@@ -392,7 +392,7 @@ function UpComming() {
                                 <h1
                                     className="text-md font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
                                 >
-                                    <a href="blog/detail">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
+                                    <a href="event/1">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
                                 </h1>
                             </div>
                             <div className="flex flex-row items-end h-full w-full px-4 mt-4">
@@ -479,7 +479,7 @@ function UpComming() {
                                 <h1
                                     className="text-md font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
                                 >
-                                    <a href="blog/detail">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
+                                    <a href="event/1">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
                                 </h1>
                             </div>
                             <div className="flex flex-row items-end h-full w-full px-4 mt-4">
@@ -566,7 +566,7 @@ function UpComming() {
                                 <h1
                                     className="text-md font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
                                 >
-                                    <a href="blog/detail">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
+                                    <a href="event/1">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
                                 </h1>
                             </div>
                             <div className="flex flex-row items-end h-full w-full px-4 mt-4">
@@ -653,7 +653,7 @@ function UpComming() {
                                 <h1
                                     className="text-md font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
                                 >
-                                    <a href="blog/detail">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
+                                    <a href="event/1">JIT Mode - A faster, more powerful, on-demand engine for tailwind</a>
                                 </h1>
                             </div>
                             <div className="flex flex-row items-end h-full w-full px-4 mt-4">

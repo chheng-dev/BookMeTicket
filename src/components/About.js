@@ -1,9 +1,11 @@
 import React from "react";
+import Footer from "./Footer";
 
 
 function About(){
     return(
-        <div className="w-full text-black mt-16 pb-8">
+        <div className="w-full">
+        <div className="w-full text-black mt-8 pb-4 md:mt-16 md:pb-8">
             <div className="container m-auto">
                 <h1 className="md:text-4xl font-black text-xl md:p-0 p-4">How to it works</h1>
                 <div className="md:flex gap-4 mt-8">
@@ -41,6 +43,9 @@ function About(){
                     </div>
                 </div>
             </div>
+            
+        </div>
+        <Footer/>
         </div>
     )
 }
