@@ -1,7 +1,7 @@
 import React from "react";
 import catSport from "../images/sport.svg"
 import catUser from "../images/user.svg"
-import catTrainning from "../images/hat.svg"
+// import catTrainning from "../images/hat.svg"
 
 function Category() {
     return (
@@ -12,7 +12,7 @@ function Category() {
                     <div className="grid">
                         <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
                             <div className="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_211" data-name="Group 211" transform="translate(-200 -770)">
                                             <rect id="Rectangle_117" data-name="Rectangle 117" width="48" height="48" rx="24" transform="translate(200 770)" fill="#2ebae2" opacity="0.1" />
@@ -28,7 +28,7 @@ function Category() {
                             </div>
 
                             <div className="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_212" data-name="Group 212" transform="translate(-455 -770)">
                                             <rect id="Rectangle_119" data-name="Rectangle 119" width="48" height="48" rx="24" transform="translate(455 770)" fill="#f36c33" opacity="0.1" />
@@ -43,7 +43,7 @@ function Category() {
                                 </div>
                             </div>
                             <div className="flex items-start  bg-white hover:shadow-xl p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_214" data-name="Group 214" transform="translate(-965 -770)">
                                             <rect id="Rectangle_123" data-name="Rectangle 123" width="48" height="48" rx="24" transform="translate(965 770)" fill="#39c38f" opacity="0.1" />
@@ -62,7 +62,7 @@ function Category() {
                                 </div>
                             </div>
                             <div className="flex items-start  bg-white  p-4 rounded-lg shadow-md transition-all duration-150 ease-out hover:ease-in">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full border">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <g id="Group_224" data-name="Group 224" transform="translate(-710 -770)">
                                             <g id="Group_213" data-name="Group 213">

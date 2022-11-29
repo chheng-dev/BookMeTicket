@@ -6,7 +6,7 @@ import Footer from "../Footer";
 function PaymentPage() {
     return (
         <div>
-            <div className="w-full text-black mt-8 pb-8">
+            <div className="w-full h-full text-black mt-8">
                 <div className="container m-auto">
                     <div className="flex gap-12">
                         <div className="flex h-full w-3/5 rounded p-4 justify-start items-center shadow-md bg-white">
