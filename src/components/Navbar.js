@@ -1,70 +1,104 @@
-import React from "react";
-import Logo from '../images/logo.jpg';
+import React, { useEffect, useState } from "react";
+import Logo from '../images/logo.png';
 import { Link } from "react-router-dom";
+
+
 function Navbar() {
+
+    // const [currentTheme,setCurrentTheme] = useState("")
+    // useEffect(()=>{
+    //     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    //         document.documentElement.classList.add('dark')
+    //         setCurrentTheme("light")
+    //     } else {
+    //         document.documentElement.classList.remove('dark')
+    //         setCurrentTheme("dark")
+    //     }
+    // },[])
+
+    const [currentTheme, setCurrentTheme] = useState("");
+
+
+    // useEffect(() => {
+    //     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    //         document.documentElement.classList.add('dark')
+    //         setCurrentTheme("light")
+    //     } else {
+    //         document.documentElement.classList.remove('dark')
+    //         setCurrentTheme("dark")
+    //     }
+    // });
+
+
+    const changeTheme = (theme) => {
+        // console.log(theme)
+        // if (theme == "light") {
+        //     localStorage.theme == "light"
+        //     document.documentElement.classList.remove("dark")
+        //     setCurrentTheme("light")
+        //     console.log("hellow")
+        // }
+        // else {
+        //     localStorage.theme == "dark"
+        //     document.documentElement.classList.add("dark")
+        //     setCurrentTheme("dark")
+        //     console.log("world")
+        // }
+    }
+
     return (
-        <nav className="bg-white shadow-lg p-4  top-0 w-full block z-10">
-            <div className="container-xl flex flex-wrap justify-between items-center mx-auto">
-                <ul>
-                    {/* <Link to="/"> */}
-                    <div className="flex items-center">
-                        {/* <Link to="/"> */}
-                            <img href="/" src={Logo} alt="Logo" />
-                        {/* </Link> */}
-                        <div className="shadow-none ml-8 w-full border-none border border-l-gray h-full m-auto">
-                            <div className="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
-                                <div className="md:flex">
-                                    <div className="w-full">
-                                        <div className="flex">
-                                            <svg t="1666673936870" className="icon mt-4 " viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3633" width="20" height="20"><path d="M614.87477 818.285935a406.893278 406.893278 0 0 1-250.148304-85.869623L73.142779 1024l-73.142779-73.142779 291.583688-291.583687a406.893278 406.893278 0 0 1-85.869623-250.148304A415.048698 415.048698 0 0 1 621.71362 0.001097a403.345854 403.345854 0 0 1 402.285283 409.160705 409.160704 409.160704 0 0 1-409.124133 409.124133zM621.71362 73.143876a315.06252 315.06252 0 0 0-329.142505 329.142504 315.06252 315.06252 0 0 0 329.142505 329.142505 315.06252 315.06252 0 0 0 329.142504-329.142505 315.06252 315.06252 0 0 0-329.142504-329.142504z" p-id="3634" fill="#1296db"></path></svg>
-                                            <input type="text" className="bg-white h-12 w-full  px-2 focus:outline-none hover:cursor-pointer ml-2" name="" placeholder="Search Event..." />
-                                            <span className="absolute top-4 right-5 border-l pl-4"><i className="fa fa-microphone text-gray-500 hover:text-green-500 hover:cursor-pointer"></i></span>
-                                        </div>
-                                    </div>
+        <div className="w-full fixed top-0 z-50">
+            <nav
+                className="flex items-center justify-between flex-wrap bg-white  py-3 lg:px-12 shadow">
+                <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+                    <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
+                        <span className="font-semibold text-xl tracking-tight">
+                            <Link to="/">
+                                <img src={Logo} alt="Logo" className="w-28" />
+                            </Link>
+                        </span>
+                    </div>
+                </div>
+
+                <div className="w-full flex-grow justify-start lg:flex lg:w-auto ">
+                    <div className=" text-gray-700 lg:flex-grow">
+                        <div className='max-w-sm'>
+                            <div className="relative flex items-center w-full h-8 rounded-l-full rounded-r-full shadow-sm bg-secondary overflow-hidden">
+                                <div className="grid place-items-center h-full w-12 font-bold text-gray-300">
+                                    <svg t="1669707201284" className="icon w-4 h-4" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4400"><path d="M640 768a382.24 382.24 0 0 1-247.808-90.912L45.248 1024 0 978.752l346.912-346.944A383.84 383.84 0 1 1 640 768z m0-704a320 320 0 1 0 320 320A320 320 0 0 0 640 64z" p-id="4401" fill="#2EBAE2"></path></svg>
                                 </div>
+
+                                <input
+                                    className="px-2 h-full w-full outline-none text-sm text-gray-700 pr-2 bg-secondary"
+                                    type="text"
+                                    id="search"
+                                    placeholder="Search for anythink.." />
                             </div>
                         </div>
                     </div>
-                    {/* </Link> */}
-                </ul>
-                
-                <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-                    <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-                        <li>
-                            {/* <div class="hs-dropdown mt-1" data-hs-dropdown-placement="bottom-right" data-hs-dropdown-offset="30">
-                                <a class="hs-dropdown-toggle hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500" href="javascript:;">
-                                    <svg class="hs-dark-mode-active:hidden block w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
-                                    </svg>
-                                    <svg class="hs-dark-mode-active:block hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                                    </svg>
-                                </a>
+                    <div className="flex ">
+                        <a
+                            onClick={() => changeTheme("dark")}
+                            className="flex items-center rounded text-gray-700 ml-2 lg:mt-0">
+                            {
+                                currentTheme === "dark" ? (
+                                    <svg t="1669700039484" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2677" width="20" height="20"><path d="M508.475476 777.927066a262.879 262.879 0 1 0 14.927684-525.546038 262.879 262.879 0 1 0-14.927684 525.546038Z" p-id="2678" fill="#707070"></path><path d="M512.119 213.154c17.673 0 32-14.327 32-32V95.896c0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32v85.258c0 17.673 14.327 32 32 32zM743.779 308.938c8.186 0.232 16.461-2.658 22.884-8.727l61.973-58.553c12.845-12.137 13.42-32.391 1.283-45.237-12.139-12.846-32.391-13.421-45.237-1.283l-61.973 58.553c-12.845 12.137-13.42 32.391-1.283 45.237 6.069 6.422 14.167 9.777 22.353 10.01zM936.04 487.929l-85.224-2.417c-17.666-0.501-32.393 13.414-32.894 31.08-0.501 17.666 13.414 32.394 31.08 32.895l85.224 2.417c17.666 0.501 32.393-13.415 32.894-31.08 0.501-17.667-13.414-32.394-31.08-32.895zM773.672 730.999c-12.137-12.846-32.391-13.42-45.237-1.284-12.846 12.138-13.421 32.391-1.284 45.237l58.552 61.972c6.069 6.424 14.166 9.779 22.353 10.011 8.185 0.232 16.462-2.659 22.884-8.727 12.846-12.138 13.421-32.391 1.284-45.237l-58.552-61.972zM514.455 817.14c-17.666-0.501-32.393 13.414-32.894 31.08l-2.417 85.224c-0.501 17.666 13.414 32.393 31.08 32.894 17.666 0.501 32.393-13.414 32.894-31.08l2.417-85.224c0.501-17.665-13.414-32.393-31.08-32.894zM256.094 726.369l-61.972 58.553c-12.846 12.138-13.42 32.391-1.283 45.237 6.069 6.425 14.165 9.779 22.353 10.011 8.185 0.232 16.461-2.659 22.884-8.727l61.972-58.553c12.846-12.138 13.42-32.391 1.283-45.237-12.138-12.848-32.391-13.42-45.237-1.284zM213.906 513.673c0.501-17.666-13.414-32.393-31.08-32.894l-85.224-2.417c-17.666-0.501-32.393 13.414-32.894 31.08-0.501 17.666 13.414 32.393 31.08 32.894l85.224 2.417c17.665 0.501 32.393-13.414 32.894-31.08zM258.157 299.266c6.069 6.423 14.166 9.778 22.353 10.01 8.186 0.232 16.461-2.658 22.884-8.727 12.846-12.137 13.42-32.39 1.283-45.237l-58.553-61.972c-12.138-12.846-32.39-13.421-45.237-1.283-12.846 12.137-13.42 32.391-1.283 45.237l58.553 61.972z" p-id="2679" fill="#707070"></path></svg>
+                                ) : (
+                                    <svg t="1669701413914" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6162" width="20" height="20"><path d="M524.8 938.666667h-4.266667a439.893333 439.893333 0 0 1-313.173333-134.4 446.293333 446.293333 0 0 1-11.093333-597.333334 432.213333 432.213333 0 0 1 170.666666-116.906666 42.666667 42.666667 0 0 1 45.226667 9.386666 42.666667 42.666667 0 0 1 10.24 42.666667 358.4 358.4 0 0 0 82.773333 375.893333 361.386667 361.386667 0 0 0 376.746667 82.773334 42.666667 42.666667 0 0 1 54.186667 55.04A433.493333 433.493333 0 0 1 836.266667 810.666667a438.613333 438.613333 0 0 1-311.466667 128z" p-id="6163"></path></svg>
+                                )
+                            }
+                        </a>
+                        <a href="#"
+                            className="flex items-center text-md px-8 py-0.5 rounded text-gray-700 ml-2 lg:mt-0">Sign
+                            in</a>
 
-                                <div id="selectThemeDropdown" class="hs-dropdown-menu hs-dropdown-open:opacity-100 mt-2 hidden z-10 transition-[margin,opacity] opacity-0 duration-300 mb-2 origin-bottom-left bg-white shadow-md rounded-lg p-2 space-y-1 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700">
-                                    <a class="hs-auto-mode-active:bg-gray-100 flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:;" data-hs-theme-click-value="auto">
-                                        Auto (system default)
-                                    </a>
-                                    <a class="hs-default-mode-active:bg-gray-100 flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:;" data-hs-theme-click-value="default">
-                                        Default (light mode)
-                                    </a>
-                                    <a class="hs-dark-mode-active:bg-gray-700 flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="javascript:;" data-hs-theme-click-value="dark">
-                                        Dark
-                                    </a>
-                                </div>
-                            </div> */}
-                        </li>
-                        <Link to="/register">
-                            <a href="#" className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Sign in</a>
-                        </Link>
-                        <Link to="/login">
-                            <a href="#" className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Login</a>
-                        </Link>
-                    </ul>
+                        <a href="#"
+                            className=" flex items-center text-md px-8 py-0.5 rounded  lg:mt-0 bg-primary-500 text-white">login</a>
+                    </div>
                 </div>
-            </div>
-            {/* {props.children} */}
-        </nav>
+
+            </nav>
+        </div>
 
     )
 }

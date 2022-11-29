@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../Footer"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function EventDetail() {
     return (
@@ -34,11 +34,29 @@ function EventDetail() {
                                 </h2>
                                 <div className="flex gap-6">
                                     <div className="flex-block">
-                                        <p className="text-gray-400">Duration</p>
+                                        <p className="flex items-center text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                                <g id="Group_226" data-name="Group 226" transform="translate(-181 -761)">
+                                                    <rect id="Rectangle_164" data-name="Rectangle 164" width="32" height="32" rx="16" transform="translate(181 761)" fill="#2ebae2" />
+                                                    <path id="calendar" d="M12.138,14.94H2.8a2.8,2.8,0,0,1-2.8-2.8V2.8A2.793,2.793,0,0,1,1.867.172V1.4a1.4,1.4,0,0,0,2.8,0V0h5.6V1.4a1.4,1.4,0,0,0,2.8,0V.172A2.793,2.793,0,0,1,14.94,2.8v9.337A2.8,2.8,0,0,1,12.138,14.94Zm.934-10.271H1.867v7.47a.933.933,0,0,0,.934.934h9.337a.933.933,0,0,0,.934-.934ZM9.337,9.337H11.2V11.2H9.337Zm0-2.8H11.2V8.4H9.337Zm-2.8,2.8H8.4V11.2H6.536Zm0-2.8H8.4V8.4H6.536Zm-2.8,2.8H5.6V11.2H3.735Zm0-2.8H5.6V8.4H3.735Zm7.937-4.669A.467.467,0,0,1,11.2,1.4V0h.934V1.4A.467.467,0,0,1,11.672,1.867Zm-8.4,0A.467.467,0,0,1,2.8,1.4V0h.934V1.4A.467.467,0,0,1,3.268,1.867Z" transform="translate(189.53 769.53)" fill="#fff" />
+                                                </g>
+                                            </svg>
+
+                                            <span className="ml-2">Date</span>
+                                        </p>
                                         <p>From 11 Sep - 12 rd Oct 2022</p>
                                     </div>
                                     <div className="flex-block">
-                                        <p className="text-gray-400">Start Time</p>
+                                        <p className="flex items-center text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                                <g id="Group_225" data-name="Group 225" transform="translate(-436 -761)">
+                                                    <rect id="Rectangle_165" data-name="Rectangle 165" width="32" height="32" rx="16" transform="translate(436 761)" fill="#2ebae2" />
+                                                    <path id="time" d="M71.47,64a7.47,7.47,0,1,0,7.47,7.47A7.479,7.479,0,0,0,71.47,64Zm3.1,10.219a.769.769,0,0,1-.469.392.639.639,0,0,1-.168.022.738.738,0,0,1-.382-.112l-2.491-1.6a1.01,1.01,0,0,1-.26-.2c-.343-.217-.51-.439-.51-.679V67.62a.783.783,0,1,1,1.564,0v4.028l2.378,1.461A.857.857,0,0,1,74.568,74.219Z" transform="translate(380.533 705.53)" fill="#fff" />
+                                                </g>
+                                            </svg>
+
+                                            <span className="ml-2"> Start Time</span>
+                                        </p>
                                         <p>9:00 AM - 6:00 PM</p>
                                     </div>
                                 </div>

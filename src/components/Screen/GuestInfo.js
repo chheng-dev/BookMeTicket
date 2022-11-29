@@ -3,7 +3,7 @@ import "../index.css"
 
 function GuestInfo() {
     return (
-        <div className="w-full text-black mt-16  h-full">
+        <div className="w-full text-black bg-red-200 mt-16   h-full">
             <div className="container h-full mb-8 mx-auto px-4 md:px-0">
                 <div className="md:flex grid grid-cols-1 gap-4">
                     <div className="md:flex md:w-1/6 "></div>

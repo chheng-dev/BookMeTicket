@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 function EventScreen() {
     const [openTab, setOpenTab] = useState(1)
     return (
-        <div className="lg:overflow-y-hidden lg:event-h-screen">
+        <div className="lg:overflow-y-hidden lg:event-h-screen mt-16 mb-16">
             <div className="container lg:event-h-screen">
                 <div className="p-4 md:p-0 md:overflow-hidden w-screen lg:event-h-screen ">
                     <div className="lg:flex grid grid-cols-1 md:grid md:grid-cols-1 h-full gap-4 event-h-screen ">
@@ -18,22 +18,22 @@ function EventScreen() {
                                     <button
                                         type="button"
                                         className="
-                rounded
-                px-4
-                py-1
-                md:px-6
-                md:py-2        
-                border border-gray-300
-                text-gray-600
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                hover:bg-black hover:bg-opacity-5
-                focus:outline-none focus:ring-0
-                transition
-                duration-150
-                ease-in-out
+                                            rounded
+                                            px-4
+                                            py-1
+                                            md:px-6
+                                            md:py-2        
+                                            border border-gray-300
+                                            text-gray-600
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            hover:bg-black hover:bg-opacity-5
+                                            focus:outline-none focus:ring-0
+                                            transition
+                                            duration-150
+                                            ease-in-out
             "
                                         onClick={() => setOpenTab(1)}
                                     >
