@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Category from "../Category";
+import Cart from "./Cart";
 
-function Filter() {
-    const [openTab, setOpenTab] = useState(1)
+function Filter(props) {
+    const [openTab, setOpenTab] = useState(1);
+    const [posts, setPosts] = useState([]);
+
+    const getPosts = async () => {
+        const respone = await fetch("https://fakestoreapi.com/products");
+        const data = await respone.json();
+        setPosts(data)
+    }
+
+    useEffect(() => {
+        getPosts();
+    });
+
     return (
-        <div className="w-full">
+        <div className="w-full h-full">
             <div className="inline-flex mb-4" role="group">
                 <button
                     type="button"
@@ -106,7 +120,7 @@ function Filter() {
                 </button>
 
             </div>
-            <div className={openTab === 1 ? "block" : "hidden"}>
+            {/* <div className={openTab === 1 ? "block" : "hidden"}>
                 <div className="lg:flex grid grid-cols-1 sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 md:gap-4 gap-6 mt-3" >
                     <div className="lg:flex lg:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl rounded-lg ">
@@ -399,46 +413,25 @@ function Filter() {
                     </div>
                     
                 </div>
-            </div>
+            </div> */}
             <div className={openTab === 2 ? "block" : "hidden"}>
-                <div className="md:flex grid grid-cols-1 gap-6 mt-3" >
-                    <div className="md:flex md:w-1/4">
-                        <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl rounded-lg ">
-                            <img
-                                className="rounded-t-lg h-48 w-full"
-                                src="https://i1.wp.com/www.aseanfootball.org/v3/wp-content/uploads/2022/04/The-Look-Company-FIFA.jpeg?resize=900%2C450&ssl=1"
-                                alt="thumbnail"
-                                loading="lazy"
-                            />
-
-                            <div className="py-2 px-4">
-                                <span className="text-xs text-gray-400">11 Nov - 12 Nov</span>
-                                <h1
-                                    className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
-                                >
-                                    <a href="/event-detail" className="text-gray-700 md:text-sm">SparkMeet “Deep Learning and Khmer Text Recognit…</a>
-                                </h1>
-                                <p className="text-xs text-gray-500">
-                                    <span className="flex">
-                                        <svg t="1669090505682" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2331" width="17" height="17"><path d="M512 64c-172.3 0-312 139.7-312 312 0 139.8 205.3 437 282.8 544.3 7.2 9.9 18.2 14.9 29.2 14.9s22-5 29.2-14.9C618.7 813 824 515.8 824 376c0-172.3-139.7-312-312-312z m0 424c-64.1 0-116-51.9-116-116s51.9-116 116-116 116 51.9 116 116-51.9 116-116 116z" p-id="2332"></path></svg>
-                                        <span className="ml-1">The Desk Flagship - Daun Penh…</span>
-                                    </span>
-                                </p>
-                                <div>
-                                    <span className="font-medium text-lg">$10.00</span> <span className="font-normal text-gray-500">/ Per Ticket</span>
+                <div className="grid grid-cols-1 gap-4 md:grid md:grid-cols-4 lg:grid lg:grid-cols-5" >
+                    {
+                        posts.map((post, idx) => {
+                            return (
+                                <div className=" h-full mx-auto bg-white shadow-md hover:shadow-2xl rounded-lg " key={idx}>
+                                    <Cart title={post.title} image={post.image} description={post.description} price={post.price}/>
                                 </div>
-                                <div className="flex my-6">
-                                <div className="flex items-center">
-                                    <img className="w-8 h-8 rounded-full ring ring-gray-800" src="https://image.shutterstock.com/mosaic_250/2780032/1194497215/stock-photo-portrait-of-smiling-african-american-student-looking-at-camera-sitting-in-caf-black-millennial-1194497215.jpg" />
-                                    <span className="text-gray-500 ml-2">Techo Startup Center</span>
-                                </div>
-                            </div>
-                            </div>
-                            
-                        </div>
-                    </div>
+                            )
+                        })
+                    }
 
-                    <div className="md:flex md:w-1/4">
+
+
+
+                    {/* </div> */}
+                </div>
+                {/* <div className="md:flex md:w-1/4">
                         <div className="h-full mx-auto bg-white shadow-md hover:shadow-2xl rounded-lg ">
                             <img
                                 className="rounded-t-lg h-48 w-full"
@@ -544,9 +537,8 @@ function Filter() {
                             </div>
 
                         </div>
-                    </div>
-                    
-                </div>
+                    </div> */}
+
             </div>
             <div className="w-full text-center my-8">
                 <button className="py-4 px-28 border border-primary rounded text-primary font-meduim">More event</button>

@@ -6,7 +6,7 @@ function EventDetail() {
     return (
         <>
             <header className="w-full">
-                <div className="container bg-red-300 mx-auto mt-4">
+                <div className="container mx-auto mt-4">
                     <img
                         className="content-page-detail object-cover w-full md:rounded-t-xl "
                         src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
@@ -15,7 +15,7 @@ function EventDetail() {
                     />
                 </div>
             </header>
-            <div className="container mx-auto mt-4 p-4 md:p-0 bg-white">
+            <div className="container mx-auto mt-4 p-4 md:p-0 ">
                 <div className="grid grid-cols-1 md:flex lg:flex lg:gap-32">
                     <div className="md:flex md:w-1/2 lg:flex lg:w-2/3 min-h-screen justify-start">
                         <div>
@@ -112,7 +112,7 @@ function EventDetail() {
                                 <h2 className="font-bold md:text-3xl text-xl">
                                     Event host by
                                 </h2>
-                                <div className="flex bg-white">
+                                <div className="flex">
                                     <div className="flex items-start py-6">
                                         <img className="w-16 h-16 rounded-full object-cover mr-4 shadow" src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="avatar" />
                                         <div className="">
