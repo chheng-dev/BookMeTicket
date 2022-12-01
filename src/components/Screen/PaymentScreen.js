@@ -1,13 +1,40 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import abaLogo from "../../images/aba.png"
 import creditLogo from "../../images/credit.png"
 import Footer from "../Footer";
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import Loading from "../Loading/Loading";
 
 function PaymentPage() {
+    const param = useParams()
+    const [loading, setLoading] = useState(false)
+    const [product, setProduct] = useState({})
+
+    const getProductDetail = async () => {
+        try {
+            setLoading(true)
+            const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`, {});
+            const data = await respone.json();
+            setProduct(data)
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getProductDetail();
+    }, {});
+
+    if (loading) {
+        return (
+            <Loading/>
+        )
+    }
     return (
         <div>
-            <div className="w-full text-black h-full pt-24">
+            <div className="w-full text-black h-full pt-24 ">
                 <div className="container mx-auto">
                     <div className="md:flex md:gap-4">
                         <div className="md:flex md:w-1/6 "></div>
@@ -76,25 +103,25 @@ function PaymentPage() {
                         <div className="md:flex md:w-2/6 h-full rounded max-w-sm">
                             <div className="p-4 md:shadow-md h-full">
                                 <div className="flex gap-4">
-                                    <div className="flex h-full w-1/2">
-                                        <img src="https://media.slidesgo.com/storage/8857150/leadership-training-event-for-business1626957387.jpg" />
+                                    <div className="flex h-full w-1/2 bg-gray-200">
+                                        <img className="object-contain h-32 shadow-md rounded-lg w-full" src={product.image} />
                                     </div>
                                     <div className="flex w-1/2">
-                                        <h6 className="text-lg">SparkMeet “Deep Learning and Khmer Text Recognit</h6>
+                                        <h6 className="text-lg line-clamp-2">{product.title}</h6>
                                     </div>
                                 </div>
                                 <div className="p-4">
                                     <h6 className="text-2xl font-bold">Order Summary</h6>
                                     <div className="my-3 border-b pb-3 border-gray-300 items-center">
-                                        <span>$68.00 Per Ticket</span>
+                                        <span>${product.price} Per Ticket</span>
                                     </div>
                                     <div className="my-3 border-b pb-3 border-gray-300">
                                         <div className="flex gap-2">
                                             <div className="flex w-1/2 justify-start items-center">
-                                                <span>$68.00 * 1 Ticket</span>
+                                                <span>${product.price} * 1 Ticket</span>
                                             </div>
                                             <div className="flex w-1/2 justify-end items-center">
-                                                <span>$68.00</span>
+                                                <span>${product.price}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -114,7 +141,7 @@ function PaymentPage() {
                                                 <span>Total Price</span>
                                             </div>
                                             <div className="flex w-1/2 justify-end items-center">
-                                                <span className="text-2xl font-bold">$68.50</span>
+                                                <span className="text-2xl font-bold">${product.price + 0.5}</span>
                                             </div>
                                         </div>
                                     </div>

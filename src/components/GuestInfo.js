@@ -1,8 +1,36 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../index.css"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import Loading from "./Loading/Loading";
 
 function GuestInfo() {
+    const param = useParams()
+    const [loading, setLoading] = useState(false)
+    console.log("param", param)
+    const [product, setProduct] = useState({})
+
+    const getProductDetail = async () => {
+        try {
+            setLoading(true)
+            const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`, {});
+            const data = await respone.json();
+            setProduct(data)
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getProductDetail();
+    }, {});
+
+    if (loading) {
+        return (
+            <Loading />
+        )
+    }
     return (
         <div className="w-full text-black h-screen m-auto ">
             <div className="container m-auto h-full mb-8 pt-32 px-4 md:px-0">
@@ -11,10 +39,10 @@ function GuestInfo() {
                     <div className="md:flex md:w-2/6 mx-auto md:shadow-lg md:px-4">
                         <div class="w-full">
                             <div class="">
-                                <h1 class="text-3xl font-medium">Book 6th JCI Cambodia Leadership Academy is back!!</h1>
+                                <h1 class="text-3xl font-medium">{product.title}</h1>
                                 {/* <p class="mt-3">Email us at help@domain.com or message us here:</p> */}
                                 <div className="mt-4">
-                                    <span className=" text-sm">Hosted by JCI Cambodia</span>
+                                    <span className=" text-sm">Hosted by {product.category}</span>
                                 </div>
                                 <form className="mt-16">
                                     <h3 className="text-gray-600 text-lg ">Guest Information</h3>
@@ -37,7 +65,7 @@ function GuestInfo() {
                                         <p>By Check out, you have agreed with <span className="text-primaruy-600">terms and condition</span></p>
                                     </div>
                                     <div className="flex space-x-2 justify-center mt-6">
-                                        <Link to="/payment">
+                                        <Link to={`/payment/${product.id}`}>
                                             <button type="button" className="w-full inline-block px-6 py-3 bg-primary text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-primary-700 hover:shadow-lg focus:bg-primary-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary active:shadow-lg transition duration-150 ease-in-out">Check out</button>
                                         </Link>
                                     </div>
@@ -45,12 +73,12 @@ function GuestInfo() {
                             </div>
                         </div>
                     </div>
-                    <div className="md:flex md:w-2/6 justify-end ">
-                        <div className="max-w-sm bg-white">
-                            <div className="md:shadow-lg">
+                    <div className="md:flex md:w-2/6 md:max-w-sm justify-end ">
+                        {/* <div className="max-w-sm mx-auto bg-white"> */}
+                            <div className="md:shadow-lg md:w-full md:h-full">
                                 <img
-                                    className=""
-                                    src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
+                                    className="object-contain h-48 w-full"
+                                    src={product.image}
                                     alt="thumbnail"
                                     loading="lazy"
                                 />
@@ -63,17 +91,17 @@ function GuestInfo() {
                                     />
                                 </div>
                                 <div className="p-8 text-sm ">
-                                    <h3 className="text-xl">6th JCI Cambodia Leadership Academy is back!!</h3>
+                                    <h3 className="text-xl">{product.title}</h3>
                                     <div className="mt-4 border-b border-gray-400 pb-4">
-                                        <span className="text-sm text-gray-600">$ 68.00 PerTicket</span>
+                                        <span className="text-sm text-gray-600">${product.price} PerTicket</span>
                                     </div>
                                     <div className="mt-4 border-b border-gray-600 pb-4">
                                         <div className="flex">
                                             <div className="flex w-1/2 justify-start">
-                                                <span className="text-sm text-gray-600">$ 68.00 * 1 Ticket</span>
+                                                <span className="text-sm text-gray-600">${product.price} * 1 Ticket</span>
                                             </div>
                                             <div className="flex w-1/2 justify-end">
-                                                <span className="text-gray-600">$ 68.00</span>
+                                                <span className="text-gray-600">${product.price}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +111,7 @@ function GuestInfo() {
                                                 <span className="text-sm text-gray-600">Total Price</span>
                                             </div>
                                             <div className="flex w-1/2 justify-end">
-                                                <span className="text-gray-600">$ 68.00</span>
+                                                <span className="text-gray-600">${product.price}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +119,7 @@ function GuestInfo() {
                             </div>
 
 
-                        </div>
+                        {/* </div> */}
                     </div>
                     <div className="flex w-1/6"></div>
                 </div>

@@ -6,7 +6,7 @@ function EventDetail() {
     return (
         <>
             <header className="w-full">
-                <div className="container bg-red-300 mx-auto mt-4">
+                <div className="container mx-auto mt-4">
                     <img
                         className="content-page-detail w-full rounded-t-xl "
                         src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
@@ -15,7 +15,7 @@ function EventDetail() {
                     />
                 </div>
             </header>
-            <div className="container mx-auto mt-4 p-4 md:p-0 bg-white">
+            <div className="container mx-auto mt-4 p-4 md:p-0">
                 <div className="grid grid-cols-1 md:flex md:gap-32">
                     <div className="md:flex md:w-2/3 min-h-screen justify-start">
                         <div>

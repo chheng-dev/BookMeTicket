@@ -4,52 +4,39 @@ import { Link } from "react-router-dom";
 
 
 function Navbar() {
-
-    // const [currentTheme,setCurrentTheme] = useState("")
-    // useEffect(()=>{
-    //     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    //         document.documentElement.classList.add('dark')
-    //         setCurrentTheme("light")
-    //     } else {
-    //         document.documentElement.classList.remove('dark')
-    //         setCurrentTheme("dark")
-    //     }
-    // },[])
-
+    
     const [currentTheme, setCurrentTheme] = useState("");
 
 
-    // useEffect(() => {
-    //     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    //         document.documentElement.classList.add('dark')
-    //         setCurrentTheme("light")
-    //     } else {
-    //         document.documentElement.classList.remove('dark')
-    //         setCurrentTheme("dark")
-    //     }
-    // });
+    useEffect(() => {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('bg-white')
+            setCurrentTheme("bg-white")
+        } else {
+            document.documentElement.classList.remove('dark')
+            setCurrentTheme("bg-white")
+        }
+    },[]);
 
 
-    const changeTheme = (theme) => {
-        // console.log(theme)
-        // if (theme == "light") {
-        //     localStorage.theme == "light"
-        //     document.documentElement.classList.remove("dark")
-        //     setCurrentTheme("light")
-        //     console.log("hellow")
-        // }
-        // else {
-        //     localStorage.theme == "dark"
-        //     document.documentElement.classList.add("dark")
-        //     setCurrentTheme("dark")
-        //     console.log("world")
-        // }
+    const changeTheme = (props) => {
+        // console.log(props)
+        if (props == "light") {
+            // localStorage.setItem == "light"
+            document.documentElement.classList.remove("dark")
+            setCurrentTheme("bg-white")
+        }
+        else {
+            // localStorage.setItem == "dark"
+            document.documentElement.classList.add("dark")
+            setCurrentTheme("dark")
+        }
     }
 
     return (
-        <div className="w-full fixed top-0 z-50">
+        <div className="w-full  top-0 z-50">
             <nav
-                className="flex items-center justify-between flex-wrap bg-white  py-3 lg:px-12 shadow">
+                className="flex items-center justify-between flex-wrap   py-3 lg:px-12 shadow">
                 <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
                     <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
                         <span className="font-semibold text-xl tracking-tight">
@@ -72,7 +59,7 @@ function Navbar() {
                                     className="px-2 h-full w-full outline-none text-sm text-gray-700 pr-2 bg-secondary"
                                     type="text"
                                     id="search"
-                                    placeholder="Search for anythink.." />
+                                    placeholder="Search Event,Name,Anything..." />
                             </div>
                         </div>
                     </div>

@@ -1,26 +1,57 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Footer from "../../Footer"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import Loading from "../../Loading/Loading";
 
-function EventDetail() {
+const EventDetail = (props) =>{
+    const param = useParams();
+    const [loading,setLoading] = useState(false)
+    console.log("param",param)
+    const [product,setProduct] = useState({})
+
+    const getProductDetail = async () => {
+        try{
+            setLoading(true)
+            const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`,{});
+            const data = await respone.json();
+            setProduct(data)
+            setLoading(false)
+        }catch(error){
+            setLoading(false)
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getProductDetail();
+    },{});
+
+    if (loading) {
+        return (
+          <Loading/>
+        )
+      }
+
+    
     return (
-        <>
+        <>  
+        
             <header className="w-full">
-                <div className="container bg-red-300 mx-auto mt-4">
+                <div className="container mx-auto mt-4">
                     <img
-                        className="content-page-detail object-cover w-full md:rounded-t-xl "
-                        src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
+                        className="content-page-detail object-contain w-full md:rounded-t-xl "
+                        src={product.image}
                         alt="thumbnail"
                         loading="lazy"
                     />
                 </div>
             </header>
-            <div className="container mx-auto mt-4 p-4 md:p-0 bg-white">
+            <div className="container mx-auto mt-4 p-4 md:p-0 ">
                 <div className="grid grid-cols-1 md:flex lg:flex lg:gap-32">
                     <div className="md:flex md:w-1/2 lg:flex lg:w-2/3 min-h-screen justify-start">
                         <div>
-                            <h2 className="font-bold md:text-3xl text-xl">
-                                SparkMeet “Deep Learning and Khmer Text Recognit
+                            <h2 className="font-bold md:text-3xl text-xl line-clamp-2">
+                                {product.title}
                             </h2>
                             <div className="w-full">
                                 <span className="flex">
@@ -76,7 +107,7 @@ function EventDetail() {
                                     Description
                                 </h2>
                                 <div className="flex">
-                                    <p>In 2022, JCI Cambodia is delighted to bring you new experience of Leadership Academy. We would like to introduce four hight profile guest speakers having long experience in JCI with various role. 1. 2022 World Executive Vice President Senator KHOUCH Pheng 2. 2019 Nation President of JCI Cambodia Senator SUON Chula 3. 2022 National President of JCI Cambodia Senator SROUR Narya 4. 2022 Academy Director Mr. KHIM Bunlene</p>
+                                    <p>{product.description}</p>
                                 </div>
                             </div>
 
@@ -112,7 +143,7 @@ function EventDetail() {
                                 <h2 className="font-bold md:text-3xl text-xl">
                                     Event host by
                                 </h2>
-                                <div className="flex bg-white">
+                                <div className="flex">
                                     <div className="flex items-start py-6">
                                         <img className="w-16 h-16 rounded-full object-cover mr-4 shadow" src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="avatar" />
                                         <div className="">
@@ -141,7 +172,7 @@ function EventDetail() {
                                     <span>Price</span>
                                 </div>
                                 <div className="flex w-2/3 justify-end items-center">
-                                    <span className="font-bold text-xl">$68.00 <span className="text-sm font-normal">/ Per Ticket</span></span>
+                                    <span className="font-bold text-xl">${product.price} <span className="text-sm font-normal">/ Per Ticket</span></span>
                                 </div>
                             </div>
                             <div className="flex gap-4 mt-4">
@@ -163,7 +194,7 @@ function EventDetail() {
                                 </div>
                             </div>
                             <div className="w-full my-6">
-                                <Link to="/event/guest-info">
+                                <Link to={`/event/guest-info/${product.id}`}>
                                     <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">Buy Ticket</button>
                                 </Link>
                             </div>

@@ -3,6 +3,7 @@ import bgCover1 from '../../images/bg-banner.png';
 import { Link } from "react-router-dom";
 import Lottie from 'react-lottie';
 import checked from "./checked.json"
+import Loading from "../Loading/Loading";
 
 
 
@@ -20,7 +21,7 @@ function test() {
 
     return (
         <>
-
+            <Loading/>
             <Lottie options={defaultOptions}  height={300}
               width={300}/>
 
