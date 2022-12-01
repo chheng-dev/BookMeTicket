@@ -1,9 +1,38 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
+import { useParams } from "react-router-dom";
 import abaLogo from "../../images/aba.png"
 import creditLogo from "../../images/credit.png"
 import Footer from "../Footer";
+import Loading from "./Loading/Loading";
 
 function PaymentPage() {
+    const param = useParams()
+    const [loading, setLoading] = useState(false)
+    console.log("param", param)
+    const [product, setProduct] = useState({})
+
+    const getProductDetail = async () => {
+        try {
+            setLoading(true)
+            const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`, {});
+            const data = await respone.json();
+            setProduct(data)
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getProductDetail();
+    }, {});
+
+    if (loading) {
+        return (
+            <Loading />
+        )
+    }
     return (
         <div>
             <div className="w-full h-full text-black mt-8">
@@ -73,7 +102,7 @@ function PaymentPage() {
                             <div className="p-4 shadow-md h-full">
                                 <div className="flex gap-4">
                                     <div className="flex h-full w-1/2">
-                                        <img src="https://media.slidesgo.com/storage/8857150/leadership-training-event-for-business1626957387.jpg" />
+                                        <img src={product.image} />
                                     </div>
                                     <div className="flex w-1/2">
                                         <h6 className="text-lg">SparkMeet “Deep Learning and Khmer Text Recognit</h6>

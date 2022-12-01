@@ -1,24 +1,26 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
-
-function Cart({ title, description, image, price }) {
+function Cart({ title, description, image, price, id }) {
     return (
-
-
         <>
             <img
-                className="rounded-t-lg h-48 w-full"
+                className="rounded-t-lg h-48 w-full object-contain"
                 src={image}
                 alt="thumbnail"
                 loading="lazy"
             />
-
+    
             <div className="py-2 px-4">
                 <span className="text-xs text-gray-400"></span>
                 <h1
                     className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                 >
-                    <a href="/event-detail" className="text-gray-700 md:text-sm line-clamp-1">{title}</a>
+                    <Link to={`event/${id}`}>
+                        <span className="text-gray-700 md:text-sm line-clamp-1">
+                            {title}
+                        </span>
+                    </Link>
                 </h1>
                 <p className="text-xs text-gray-500">
                     <span className="flex">
