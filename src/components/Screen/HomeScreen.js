@@ -1,22 +1,26 @@
 import React from "react";
-// import Navbar from "../Navbar";
 import Header from "../Header";
 import Category from "../Category"
-// import UpComming from "../Upcomming";
 import About from "../About"
 import Event from "../Event";
-// import Footer from "../Footer"
+import Loading from "../Loading/Loading";
+import { useState } from "react";
 
-
-function HomeScreen(){
-    return(
+function HomeScreen() {
+    const [loading, setLoading] = useState(false)
+    if (loading) {
+        return (
+            <Loading />
+        )
+    }
+    // setLoading(false)
+    return (
         <>
-            <Header/>
-            <Category/>
-            {/* <UpComming/> */}
-            <Event/>
-            <About/>
-            {/* <Footer/>  */}
+
+            <Header />
+            <Category />
+            <Event />
+            <About />
         </>
     )
 }

@@ -14,14 +14,16 @@ function NavbarBottom() {
 
     // const handleCancel = () => {
     //     setModalOpen(false)
-    // }
+    // } 
 
     return (
         <div className="w-full">
             <div className="bg-white p-4 top-0 fixed w-full z-10 shadow-lg">
                 <div className="flex gap-2">
                     <div className="flex items-center">
-                        <img src={Logo} className="w-44" />
+                        <Link to="/">
+                            <img src={Logo} className="w-44" />
+                        </Link>
                     </div>
                     <div className=" flex items-center w-full justify-end overflow-hidden">
                         {/* <div className="grid place-items-center h-full w-12 font-bold text-gray-300">

@@ -15,20 +15,19 @@ import TestScreen from './components/Screen/TestScreen';
 import NavbarBottom from './components/NavBarBottom';
 import 'antd/dist/antd.css';
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
-import { useState } from 'react'
-import Logo from "./images/logo.png"
-import { Link } from "react-router-dom";
+
+
 
 function App() {
   return (
     <div className="w-full h-full scroll-smooth">
       <BrowserView>
-        <Navbar/>
+        <Navbar />
       </BrowserView>
       <Routes>
-        <Route path='/' element={<HomeScreen />}></Route>
+        <Route index path='/' element={<HomeScreen />}></Route>
         <Route path='event' element={<EventScreen />}></Route>
-        <Route exact path='event/:id' element={<EventDetail />} />
+        <Route path='/event/:id' element={<EventDetail />} />
         <Route path='/test' element={<TestScreen />}></Route>
         <Route path='/event/guest-info/:id' element={<GuestInfo />}></Route>
         <Route path='/ticket' element={<Ticket />}></Route>

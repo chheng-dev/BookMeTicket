@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 function Cart({ title, description, image, price, id }) {
     return (
         <>
+            <Link to={`event/${id}`}>
             <img
                 className="rounded-t-lg h-48 w-full object-contain"
                 src={image}
@@ -31,7 +32,7 @@ function Cart({ title, description, image, price, id }) {
                     </span>
                 </p>
                 <div>
-                    <span className="font-medium text-lg">${price}</span> <span className="font-normal text-gray-500">/ Per Ticket</span>
+                    <span className="font-medium text-lg text-red-700">${price}</span> <span className="font-normal text-gray-500">/ Per Ticket</span>
                 </div>
                 <div className="flex my-6">
                     <div className="flex items-center">
@@ -40,7 +41,7 @@ function Cart({ title, description, image, price, id }) {
                     </div>
                 </div>
             </div>
-
+        </Link>
         </>
 
 

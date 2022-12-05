@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from '../images/logo.png';
-import { Link } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 
 
 function Navbar() {
@@ -34,7 +34,8 @@ function Navbar() {
     }
 
     return (
-        <div className="w-full  top-0 z-50">
+        <>
+        <div className="w-full fixed bg-white top-0 z-30">
             <nav
                 className="flex items-center justify-between flex-wrap   py-3 lg:px-12 shadow">
                 <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
@@ -86,6 +87,8 @@ function Navbar() {
 
             </nav>
         </div>
+        <Outlet />
+        </>
 
     )
 }

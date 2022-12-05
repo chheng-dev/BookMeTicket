@@ -44,12 +44,14 @@ function Filter(props) {
                 md:px-6
                 md:py-2        
                 border border-gray-300
+                focus:bg-primary-600
+                focus:text-white
                 text-gray-600
                 font-medium
                 text-xs
                 leading-tight
                 uppercase
-                hover:bg-black hover:bg-opacity-5
+                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700 
                 focus:outline-none focus:ring-0
                 transition
                 duration-150
@@ -68,12 +70,14 @@ function Filter(props) {
                 md:px-6
                 md:py-2    
                 border border-gray-300
+                focus:bg-primary-600
+                focus:text-white
                 text-gray-600
                 font-medium
                 text-xs
                 leading-tight
                 uppercase
-                hover:bg-black hover:bg-opacity-5
+                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700
                 focus:outline-none focus:ring-0
                 transition
                 duration-150
@@ -93,12 +97,15 @@ function Filter(props) {
                 md:px-6
                 md:py-2    
                 border border-gray-300
+                focus:bg-primary-600
+                focus:text-white
+                focus:border-0
                 text-gray-600
                 font-medium
                 text-xs
                 leading-tight
                 uppercase
-                hover:bg-black hover:bg-opacity-5
+                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700
                 focus:outline-none focus:ring-0
                 transition
                 duration-150
@@ -118,12 +125,14 @@ function Filter(props) {
                 md:px-6
                 md:py-2    
                 border border-gray-300
+                focus:bg-primary-600
+                focus:text-white
                 text-gray-600
                 font-medium
                 text-xs
                 leading-tight
                 uppercase
-                hover:bg-black hover:bg-opacity-5
+                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700
                 focus:outline-none focus:ring-0
                 transition
                 duration-150

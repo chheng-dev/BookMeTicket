@@ -11,22 +11,20 @@ function PaymentPage() {
     console.log("param", param)
     const [product, setProduct] = useState({})
 
-    const getProductDetail = async () => {
-        try {
-            setLoading(true)
-            const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`, {});
-            const data = await respone.json();
-            setProduct(data)
-            setLoading(false)
-        } catch (error) {
-            setLoading(false)
-            console.log(error)
-        }
-    }
-
     useEffect(() => {
-        getProductDetail();
-    }, {});
+        const getProductDetail = async () => {
+            try {
+                setLoading(true)
+                const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`, {});
+                const data = await respone.json();
+                setProduct(data)
+                setLoading(false)
+            } catch (error) {
+                setLoading(false)
+                console.log(error)
+            }
+        }
+    }, []);
 
     if (loading) {
         return (

@@ -36,7 +36,7 @@ const EventDetail = (props) =>{
     return (
         <>  
         
-            <header className="w-full">
+            <div className="w-full h-full md:pt-16">
                 <div className="container mx-auto mt-4">
                     <img
                         className="content-page-detail object-contain w-full md:rounded-t-xl "
@@ -45,7 +45,7 @@ const EventDetail = (props) =>{
                         loading="lazy"
                     />
                 </div>
-            </header>
+            </div>
             <div className="container mx-auto mt-4 p-4 md:p-0 ">
                 <div className="grid grid-cols-1 md:flex lg:flex lg:gap-32">
                     <div className="md:flex md:w-1/2 lg:flex lg:w-2/3 min-h-screen justify-start">

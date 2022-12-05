@@ -118,7 +118,7 @@ function EventScreen() {
                                 </div>
                                 <div className={openTab === 1 ? "block" : "hidden"}>
                                     <div className="md:pb-24 grid grid-cols-1 sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 md:gap-4  lg:grid lg:grid-cols-3 2xl:grid 2xl:grid-cols-4 gap-6 mt-3" >
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://deviniti.com/app/uploads/2021/10/09-20_DM-8186_EVENTS_01_MAIN-2-1024x682.png"
@@ -155,7 +155,7 @@ function EventScreen() {
 
                                         </div>
 
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://guidebook.com/mobile-guides/wp-content/uploads/2021/01/event-planning6-e1576288302856-edited.jpg"
@@ -191,7 +191,7 @@ function EventScreen() {
 
                                         </div>
 
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://images.squarespace-cdn.com/content/v1/5aadc54285ede1bd72181a3a/1521339647830-LKHTH62ZRY5TCGVCW81P/shutterstock_538256848.jpg?format=1500w"
@@ -227,7 +227,7 @@ function EventScreen() {
 
                                         </div>
 
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://www.specialevents.com/sites/specialevents.com/files/styles/article_featured_retina/public/88A4947%201_2.jpg?itok=CHxwyji-"
@@ -268,7 +268,7 @@ function EventScreen() {
                                 </div>
                                 <div className={openTab === 2 ? "block" : "hidden"}>
                                     <div className="md:pb-24 grid grid-cols-1 sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-3  2xl:grid 2xl:grid-cols-4 gap-6 mt-3" >
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://i1.wp.com/www.aseanfootball.org/v3/wp-content/uploads/2022/04/The-Look-Company-FIFA.jpeg?resize=900%2C450&ssl=1"
@@ -304,7 +304,7 @@ function EventScreen() {
 
                                         </div>
 
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://d12eu00glpdtk2.cloudfront.net/public/images/events/kidzania-football-cup-2022-registration/KidZania-Doha-Football-Cup-2022.jpg"
@@ -340,7 +340,7 @@ function EventScreen() {
 
                                         </div>
 
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2022-02/FIFA%20Club%20World%20Cup%20trophy%20020422.jpg?itok=5pZc3sgR"
@@ -376,7 +376,7 @@ function EventScreen() {
 
                                         </div>
 
-                                        <div className="h-full mx-auto bg-white shadow-md rounded-lg hover:shadow-2xl ">
+                                        <div className="h-full mx-auto bg-white drop-shadow-lg rounded-lg hover:shadow-2xl ">
                                             <img
                                                 className="rounded-lg h-48 w-full"
                                                 src="https://m.thepeninsulaqatar.com/get/maximage/20221021_1666370619-755.JPG?1666370619"
