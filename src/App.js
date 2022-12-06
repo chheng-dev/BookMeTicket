@@ -20,14 +20,14 @@ import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detec
 
 function App() {
   return (
-    <div className="w-full h-full scroll-smooth">
+    <div className="w-full h-full dark:bg-gray-900">
       <BrowserView>
         <Navbar />
       </BrowserView>
       <Routes>
-        <Route index path='/' element={<HomeScreen />}></Route>
+        <Route exact path='/' element={<HomeScreen />}></Route>
         <Route path='event' element={<EventScreen />}></Route>
-        <Route path='/event/:id' element={<EventDetail />} />
+        <Route path='event/:id' element={<EventDetail />} />
         <Route path='/test' element={<TestScreen />}></Route>
         <Route path='/event/guest-info/:id' element={<GuestInfo />}></Route>
         <Route path='/ticket' element={<Ticket />}></Route>
