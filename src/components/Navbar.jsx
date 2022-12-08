@@ -16,7 +16,7 @@ function Navbar() {
     }
 
     useEffect(() => {
-        loadTheme();
+        // loadTheme();
     },[]);
 
 
