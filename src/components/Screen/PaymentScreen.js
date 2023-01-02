@@ -4,6 +4,8 @@ import creditLogo from "../../images/credit.png"
 import Footer from "../Footer";
 import { Link, useParams } from "react-router-dom"
 import Loading from "../Loading/Loading";
+import { Space } from "antd";
+import NavLogo from "../NavLogo";
 
 function PaymentPage() {
     const param = useParams()
@@ -34,13 +36,14 @@ function PaymentPage() {
     }
     return (
         <div>
+             <NavLogo />
             <div className="w-full text-black h-full pt-24 md:pt-32 md:pb-16 dark:text-white px-4 md:px-0">
                 <div className="container mx-auto">
                     <div className="md:flex md:gap-4">
                         <div className="md:flex md:w-1/6 items-center"></div>
                         <div className="md:flex h-full md:w-2/6 rounded-lg p-4 box-shadow justify-start items-center bg-white dark:bg-gray-800">
                             <div className="w-full">
-                                <h1 className="text-2xl font-meduim dark:text-white">Choose Payment Methods</h1>
+                                <h1 className="text-2xl font-meduim dark:text-white py-3">Choose Payment Methods</h1>
                                 <div>
                                     <div className="flex border border-gray-400 rounded-lg">
                                         <div className="w-full h-full">
@@ -95,12 +98,18 @@ function PaymentPage() {
                                 </div>
                                 <div className="w-full h-full">
                                     <Link to="/ticket">
-                                        <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">Pay Now</button>
+                                        <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">
+                                            
+                                            <Space>
+                                            <svg t="1672215516468" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5508" width="24" height="24"><path d="M864 896H32c-19.2 0-32-12.8-32-32V288c0-19.2 12.8-32 32-32h832c19.2 0 32 12.8 32 32v576c0 19.2-12.8 32-32 32zM64 832h768V320H64v512z" fill="#e6e6e6" p-id="5509"></path><path d="M448 768c-70.4 0-128-51.2-128-112 0-19.2 12.8-32 32-32s32 12.8 32 32c0 25.6 28.8 48 64 48s64-22.4 64-48c0-22.4-25.6-48-64-48-70.4 0-128-48-128-112 0-60.8 57.6-112 128-112s128 51.2 128 112c0 19.2-12.8 32-32 32s-32-12.8-32-32c0-25.6-28.8-48-64-48s-64 22.4-64 48 28.8 48 64 48c70.4 0 128 51.2 128 112S518.4 768 448 768z" fill="#e6e6e6" p-id="5510"></path><path d="M448 441.6c-19.2 0-32-12.8-32-32V384c0-19.2 12.8-32 32-32s32 12.8 32 32v25.6c0 19.2-12.8 32-32 32zM448 800c-19.2 0-32-12.8-32-32v-25.6c0-19.2 12.8-32 32-32s32 12.8 32 32v25.6c0 19.2-12.8 32-32 32z" fill="#e6e6e6" p-id="5511"></path><path d="M992 800c-19.2 0-32-12.8-32-32V192H128c-19.2 0-32-12.8-32-32s12.8-32 32-32h864c19.2 0 32 12.8 32 32v608c0 19.2-12.8 32-32 32z" fill="#e6e6e6" p-id="5512"></path></svg>
+                                            Pay Now
+                                            </Space>
+                                        </button>
                                     </Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="md:flex mt-4 md:pt-0  h-full items-center box-shadow rounded-lg max-w-sm dark:bg-gray-800">
+                        <div className="md:flex mt-4 md:pt-0  h-full items-center box-shadow rounded-lg md:max-w-sm dark:bg-gray-800  bg-red-400">
                             <div className="p-4 box-shadow h-full dark:bg-gray-800">
                                 <div className="flex gap-4">
                                     <div className="flex h-full w-1/2 bg-gray-200">

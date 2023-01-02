@@ -169,7 +169,7 @@ function Filter(props) {
                     <button className="py-4 px-28 border border-primary rounded text-primary font-meduim">More event</button>
                 </Link>
             </div>
-            <Outlet />
+            {/* <Outlet /> */}
         </div>
 
     )
