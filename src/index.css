@@ -7,10 +7,22 @@
 } */
 /* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900"); */
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #1E2024;
+
+body h1,
+h2,
+h3,
+h4,
+h5,
+span,
+p,
+div {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
 }
+
 .height-bg {
     height: 503px;
     /* opacity: 0.3; */
@@ -92,7 +104,60 @@ input[type='number']::-webkit-outer-spin-button {
 .custom-number-input button:focus {
     outline: none !important;
 }
+
 /*  */
-.box-shadow{
+.box-shadow {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #13718C;
+}
+
+.ant-tabs-nav-wrap {
+    color: #858585;
+    /* border-bottom: 1px solid red; */
+
+}
+
+.tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #2EBAE2 !important;
+    font-weight: 500;
+
+}
+
+.tabs .ant-tabs-tab {
+    width: 150px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #2EBAE2;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: white;
+    font-weight: 500;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    color: gray;
+    border-color: #d9d9d9;
+    background: #D9D9D9;
+    font-weight: 500;
+    border-radius: 4px;
+    border:1px solid #dedede
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+    border-top: #d9d9d9 !important;
+}
+
+.page-detail {
+    max-width: 1200px;
+    height: 100%;
 }

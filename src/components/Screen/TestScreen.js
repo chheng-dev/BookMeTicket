@@ -21,9 +21,10 @@ function test() {
 
     return (
         <>
-            <Loading/>
+            {/* <Loading/>
             <Lottie options={defaultOptions}  height={300}
-              width={300}/>
+              width={300}/> */}
+              <h1>Test Screen</h1>
 
         </>
         // <section className="w-full h-full scroll-smooth" id='home'>

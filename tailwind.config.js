@@ -36,9 +36,13 @@ module.exports = {
           '800': '#9E9E9E',
           '900': '#828282'
         },
+        'lightGray': {
+          DEFAULT: '#F5F5F5',
+          '50': '#FFFFFF', '100': '#FFFFFF', '200': '#FFFFFF', '300': '#FFFFFF', '400': '#FFFFFF', '500': '#F5F5F5', '600': '#D9D9D9', '700': '#BDBDBD', '800': '#A1A1A1', '900': '#858585'
+        },
       }
     },
-    
+
   },
   plugins: [
     require('@tailwindcss/line-clamp'),

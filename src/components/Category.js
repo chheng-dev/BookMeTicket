@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import catSport from "../images/sport.svg"
 import catUser from "../images/user.svg"
 // import catTrainning from "../images/hat.svg"
@@ -93,4 +94,4 @@ function Category() {
 }
 
 
-export default Category
+export default withRouter(Category);

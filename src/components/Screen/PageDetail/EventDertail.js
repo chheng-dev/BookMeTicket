@@ -2,13 +2,19 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../Footer"
 import { Link, useParams } from "react-router-dom"
 import Loading from "../../Loading/Loading";
-
+import { FiShoppingCart } from "react-icons/fi";
+import { Space } from "antd";
+import { BrowserView, MobileView } from "react-device-detect";
+import Navbar from "../../Navbar";
+import NavbarBottom from "../../NavBarBottom";
+import { Map, GoogleApiWrapper } from 'google-maps-react';
+import CurrencyFormat from 'react-currency-format';
 
 const EventDetail = (props) => {
     const param = useParams();
     const [loading, setLoading] = useState(false)
     console.log("param", param)
-    const [product, setProduct] = useState([])
+    const [product, setProduct] = useState([]);
 
     const getProductDetail = async () => {
         try {
@@ -36,8 +42,10 @@ const EventDetail = (props) => {
 
     return (
         <>
-
-            <div className="w-full h-full pt-16">
+            <BrowserView>
+                <Navbar />
+            </BrowserView>
+            <div className="page-detail mx-auto rounded-2xl w-full h-full pt-16 bg-lightGray">
                 <div className="container mx-auto mt-4">
                     <img
                         className="content-page-detail object-contain w-full md:rounded-t-xl "
@@ -47,10 +55,10 @@ const EventDetail = (props) => {
                     />
                 </div>
             </div>
-            <div className="container mx-auto mt-4 p-4 md:p-0 dark:text-white">
-                <div className="grid grid-cols-1 md:flex lg:flex lg:gap-32">
+            <div className="page-detail mx-auto mt-4 p-4 md:p-0 dark:text-white bg-lightGray-50">
+                <div className="grid grid-cols-1 md:flex lg:flex lg:gap-24">
                     <div className="md:flex md:w-1/2 lg:flex lg:w-2/3 min-h-screen justify-start">
-                        <div>
+                        <div className="w-full">
                             <h2 className="font-bold md:text-3xl text-xl line-clamp-2 dark:text-white">
                                 {product.title}
                             </h2>
@@ -102,7 +110,19 @@ const EventDetail = (props) => {
                                     Event Locaton
                                 </h2>
                                 <div className="flex">
-                                    <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6386945005797!2d104.90384381533713!3d11.577738247055695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095132315da61b%3A0x3c91a9e3aeb49ae9!2sBookMeBus!5e0!3m2!1sen!2skh!4v1668570367336!5m2!1sen!2skh" frameborder="0" style={{ border: 0 }} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                    <div className="rounded-md w-full" style={{ height: '300px', width: '100%', position: "relative" }}>
+                                        <Map
+                                            google={props.google}
+                                            zoom={14}
+                                            initialCenter={
+                                                {
+                                                    lat: 11.577827583472297,
+                                                    lng: 104.90598958105248
+
+                                                }
+                                            }
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -176,7 +196,11 @@ const EventDetail = (props) => {
                                     <span>Price</span>
                                 </div>
                                 <div className="flex w-2/3 justify-end items-center">
-                                    <span className="font-bold text-xl">${product.price} <span className="text-sm font-normal">/ Per Ticket</span></span>
+                                    <span >
+                                        {/* ${product.price} */}
+                                        <CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} prefix={'$'} className="font-bold text-xl" />
+                                        <span className="text-sm font-normal">/ Per Ticket</span>
+                                    </span>
                                 </div>
                             </div>
                             <div className="flex gap-4 mt-4">
@@ -198,8 +222,13 @@ const EventDetail = (props) => {
                                 </div>
                             </div>
                             <div className="w-full my-6">
-                                <Link to={`/event/guest-info/${product.id}`}>
-                                    <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">Buy Ticket</button>
+                                <Link to={`/guest-info/${product.id}`}>
+                                    <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">
+                                        <Space>
+                                            <FiShoppingCart className="text-lg" />
+                                            Buy Ticket
+                                        </Space>
+                                    </button>
                                 </Link>
                             </div>
                         </div>
@@ -209,11 +238,15 @@ const EventDetail = (props) => {
             <div className="pb-16 md:pb-0">
                 <Footer />
             </div>
-
+            <MobileView>
+                <NavbarBottom />
+            </MobileView>
         </>
     )
 }
 
 
 
-export default EventDetail;
+export default GoogleApiWrapper({
+    apiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+})(EventDetail);

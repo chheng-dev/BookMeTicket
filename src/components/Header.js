@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'antd';
 import '../index.css'
 import bgCover1 from "../images/bg-banner.png"
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 
 function Header() {
     return (
@@ -48,4 +48,4 @@ function Header() {
 }
 
 
-export default Header
+export default withRouter(Header)
