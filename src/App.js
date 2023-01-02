@@ -39,12 +39,16 @@ function App() {
         <Route path='/payment/:id'>
           <PaymentPage />
         </Route>
+        <Route exact path='/test'>
+          <TestScreen />
+        </Route>
         <Route exact path='/login'>
           <Login />
         </Route>
         <Route exact path='/register'>
           <Register />
         </Route>
+     
         {/* <Route path='*'>
           <NotFound />
         </Route> */}

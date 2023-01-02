@@ -12,7 +12,7 @@ function NavbarBottom() {
         
      }
     return (
-        <div className="w-full mt-16">
+        <div className="w-full mt-16 relative h-screen">
             <div className="bg-white p-4 top-0 fixed w-full z-10 box-shadow">
                 <div className="flex gap-2">
                     <div className="flex items-center">
