@@ -8,6 +8,7 @@ import NavLogo from "./NavLogo";
 import { MobileView, BrowserView } from "react-device-detect";
 import NavbarBottom from "./NavBarBottom";
 import Footer from "./Footer";
+import CurrencyFormat from "react-currency-format";
 
 
 
@@ -47,9 +48,9 @@ function GuestInfo() {
                 </BrowserView>
 
                 <div className="w-full page-detail m-auto h-full">
-                    <div className="md:pt-24">
+                    <div className="pt-24">
                         <div className="md:flex md:gap-4 justify-center center-center">
-                            <div className="md:flex md:w-8/12">
+                            <div className="md:flex md:w-8/12 p-4 md:p-0">
                                 <div class="p-4 box-shadow w-full rounded-md md:py-8 bg-white">
                                     <form className="">
                                         <h3 className="text-gray-600 dark:text-white font-semibold text-2xl">Guest Information</h3>
@@ -89,8 +90,8 @@ function GuestInfo() {
                                     </form>
                                 </div>
                             </div>
-                            <div className="md:flex md:w-4/12">
-                                <div className="p-4 w-full md:p-4 dark:text-white box-shadow bg-white rounded-md">
+                            <div className="md:flex md:w-4/12 p-4 md:p-0">
+                                <div className="p-4 w-full dark:text-white box-shadow bg-white rounded-md">
                                     <div className="flex gap-4">
                                         <div className="flex h-full w-1/2 bg-lightGray">
                                             <img className="object-contain h-32 rounded-lg w-full" src={product.image} />
@@ -130,7 +131,7 @@ function GuestInfo() {
                                                 <span>Total Price</span>
                                             </div>
                                             <div className="flex w-1/2 justify-end items-center">
-                                                <span className="text-2xl font-bold">${product.price + 0.5}</span>
+                                                <CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
                                             </div>
                                         </div>
                                     </div>

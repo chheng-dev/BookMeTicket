@@ -4,7 +4,7 @@ import Category from "../Category"
 import About from "../About"
 import Event from "../Event";
 import { withRouter } from "react-router-dom";
-import { BrowserView,MobileView } from "react-device-detect";
+import { BrowserView, MobileView } from "react-device-detect";
 import Navbar from "../Navbar";
 import NavbarBottom from "../NavBarBottom";
 
@@ -12,7 +12,9 @@ function HomeScreen() {
     return (
         <>
             <BrowserView>
-                <Navbar />
+                <div className="fixed  bg-white dark:bg-gray-900 top-0 z-30 w-full">
+                    <Navbar />
+                </div>
             </BrowserView>
             <div className="pb-16 md:pb-0">
                 <Header />

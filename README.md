@@ -14,3 +14,6 @@ For detailed explanation on how things work, check out the [documentation](https
 
 # qr code generate
 # https://www.npmjs.com/package/react-qrcode-logo
+
+# currency format
+# npmjs.com/package/react-currency-format

@@ -107,12 +107,11 @@ input[type='number']::-webkit-outer-spin-button {
 
 /*  */
 .box-shadow {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: #13718C;
-}
 
 .ant-tabs-nav-wrap {
     color: #858585;
@@ -150,7 +149,7 @@ input[type='number']::-webkit-outer-spin-button {
     background: #D9D9D9;
     font-weight: 500;
     border-radius: 4px;
-    border:1px solid #dedede
+    border: 1px solid #dedede
 }
 
 .ant-divider-horizontal.ant-divider-with-text {
@@ -160,4 +159,28 @@ input[type='number']::-webkit-outer-spin-button {
 .page-detail {
     max-width: 1200px;
     height: 100%;
+}
+
+.ant-popover-inner-content {
+    padding: 0 !important;
+}
+
+.ant-tabs-ink-bar {
+    height: 5px;
+    background: #2EBAE2 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #2EBAE2 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:active {
+    color: #2EBAE2 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover {
+    color: #2EBAE2 !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:focus {
+    color: #2EBAE2 !important;
 }

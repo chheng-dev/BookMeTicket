@@ -4,7 +4,10 @@ import Footer from "../Footer";
 import Logo from '../../images/logo.png';
 import Lottie from 'react-lottie';
 import checked from "./checked.json"
-
+import Navbar from "../Navbar";
+import { BrowserView,MobileView } from "react-device-detect";
+import NavLogo from "../NavLogo";
+import NavbarBottom from "../NavBarBottom";
 function Ticket() {
     const defaultOptions = {
         loop: true,
@@ -16,11 +19,14 @@ function Ticket() {
     };
     return (
         <div>
-            <div className="w-full text-black mt-16 pb-8 md:pb-16 p-4 md:p-0 dark:text-white">
-                <div className="text-center mb-4">
+            <BrowserView>
+                <Navbar />
+            </BrowserView>
+            <div className="w-full text-black pb-8 md:pb-16 p-4 md:p-0 dark:text-white md:mt-12">
+                <div className="text-center mb-2 pt-8 md:pt-0">
                     <div>
                         <Lottie options={defaultOptions} height={150}
-                        width={150} />
+                            width={150} />
                     </div>
                     <h1 className="text-xl text-center dark:text-white">Congratulations Chheng you have successfully booked a ticket!</h1>
                     <span className="text-gray-400 text-sm text-center">Download the e-ticket below in order to attend the event.</span>
@@ -84,6 +90,9 @@ function Ticket() {
                 </div>
             </div>
             <Footer />
+            <MobileView>
+                <NavbarBottom/>
+            </MobileView>
         </div>
     )
 }
