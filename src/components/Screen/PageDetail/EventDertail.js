@@ -43,7 +43,9 @@ const EventDetail = (props) => {
     return (
         <>
             <BrowserView>
-                <Navbar />
+                <div className="fixed  bg-white dark:bg-gray-900 top-0 z-30 w-full">
+                    <Navbar />
+                </div>
             </BrowserView>
             <div className="page-detail mx-auto rounded-2xl w-full h-full pt-16 bg-lightGray">
                 <div className="container mx-auto mt-4">

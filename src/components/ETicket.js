@@ -5,6 +5,7 @@ import Logo from '../../images/logo.png';
 import Lottie from 'react-lottie';
 import checked from "./checked.json"
 import { FiDownload } from "react-icons/fi";
+import Navbar from "./Navbar";
 
 function Ticket() {
     const defaultOptions = {
@@ -17,6 +18,7 @@ function Ticket() {
     };
     return (
         <div>
+            <Navbar/>
             <div className="w-full text-black mt-16 pb-8 md:pb-16 p-4 md:p-0 dark:text-white">
                 <div className="text-center mb-4">
                     <div>
@@ -38,14 +40,14 @@ function Ticket() {
 
                         <div className="p-6 text-sm">
                             <h3 className="text-lg dark:text-white">6th JCI Cambodia Leadership Academy is back!!</h3>
-                            <p className="text-gray-400 my-2">Ticket No <span className="text-black font-bold dark:text-white">12345678</span></p>
-                            <div className="my-4 border-y py-4 border-gray-400">
+                            <p className="text-gray-400 my-1">Ticket No <span className="text-black font-bold dark:text-white">12345678</span></p>
+                            <div className="my-4 border-y py-4 border-lightGray">
                                 <p className=" text-gray-400">Guest Information</p>
                                 <p className="my-1">Menghour lao | +855 69 823 451</p>
                                 <p>laomenghour@gmail.com</p>
                             </div>
-                            <div className="border-b border-gray-400 pb-4">
-                                <div className="my-2">
+                            <div className="border-b border-lightGray pb-4">
+                                <div className="my-1">
                                     <p className="text-gray-400">Duration</p>
                                     <p>From 30th Sep - 3rd Oct 2022</p>
                                 </div>

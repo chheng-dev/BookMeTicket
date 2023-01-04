@@ -13,7 +13,7 @@ import PaymentPage from './components/Screen/PaymentScreen';
 import TestScreen from './components/Screen/TestScreen';
 import 'antd/dist/antd.css';
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
-
+import MyAccount from './components/Screen/Form/MyAccount';
 
 
 function App() {
@@ -39,12 +39,19 @@ function App() {
         <Route path='/payment/:id'>
           <PaymentPage />
         </Route>
+        <Route path='/account'>
+          <MyAccount />
+        </Route>
+        <Route exact path='/test'>
+          <TestScreen />
+        </Route>
         <Route exact path='/login'>
           <Login />
         </Route>
         <Route exact path='/register'>
           <Register />
         </Route>
+     
         {/* <Route path='*'>
           <NotFound />
         </Route> */}
