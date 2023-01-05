@@ -14,15 +14,15 @@ import TestScreen from './components/Screen/TestScreen';
 import 'antd/dist/antd.css';
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 import MyAccount from './components/Screen/Form/MyAccount';
-import Preferences from './components/Preference';
+// import Preferences from './components/Preference';
 import { useState } from 'react';
 
 
 function App() {
-  const [token, setToken] = useState();
-  if (!token) {
-    return <Login setToken={setToken} />
-  }
+  // const [token, setToken] = useState();
+  // if (token) {
+  //   return <Login setToken={setToken} />
+  // }
   return (
     <div className="w-full h-full  dark:bg-gray-900">
 
@@ -57,9 +57,9 @@ function App() {
         <Route exact path='/register'>
           <Register />
         </Route>
-        <Route path="/preferences">
+        {/* <Route path="/preferences">
           <Preferences />
-        </Route>
+        </Route> */}
 
         {/* <Route path='*'>
           <NotFound />
