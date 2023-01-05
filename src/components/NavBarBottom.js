@@ -7,10 +7,6 @@ import { FiHome,FiUser,FiGlobe } from "react-icons/fi";
 
 function NavbarBottom() {
 
-    const refreshPage = ()=>{
-        this.setState({});
-        
-     }
     return (
         <div className="w-full mt-16 h-screen">
             <div className="bg-white p-4 top-0 fixed w-full z-10 box-shadow">
@@ -32,7 +28,7 @@ function NavbarBottom() {
             </div>
             <section id="bottom-navigation" className="block fixed inset-x-0 bottom-0 z-10 bg-white box-shadow">
                 <div id="tabs" className="flex justify-between">
-                    <Link onClick={refreshPage} to="/" className="w-full hover:text-black justify-center inline-block text-center pt-2 pb-1 active:text-primary text-gray-600 focus:border-t-2 focus:border-t-primary">
+                    <Link to="/" className="w-full hover:text-black justify-center inline-block text-center pt-2 pb-1 active:text-primary text-gray-600 focus:border-t-2 focus:border-t-primary">
                         <FiHome className="inline-block mb-1 text-xl"/>
                         <span className="tab tab-home block text-xs">
                            Home</span>
@@ -40,7 +36,7 @@ function NavbarBottom() {
                     <Link to="/event" className="w-full hover:text-black justify-center inline-block focus:border-t-2 focus:border-t-primary text-center pt-2 pb-1 active:text-primary text-gray-600">                        <FiGlobe className="inline-block mb-1 text-xl"/>
                         <span className="tab tab-explore block text-xs">Explore</span>
                     </Link>
-                   <Link className="w-full hover:text-black justify-center inline-block focus:border-t-2 focus:border-t-primary text-center pt-2 pb-1 active:text-primary text-gray-600">
+                   <Link to={'/login'} className="w-full hover:text-black justify-center inline-block focus:border-t-2 focus:border-t-primary text-center pt-2 pb-1 active:text-primary text-gray-600">
                         <FiUser className="inline-block mb-1 text-xl"/>
                         <span className="tab tab-account block text-xs">Account</span>
                     </Link>

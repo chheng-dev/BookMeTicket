@@ -4,7 +4,7 @@ import logo from "../images/logo.png"
 function Footer() {
     return (
 
-        <footer className="text-gray-600  dark:text-white bg-lightGray absolute w-full md:mt-16">
+        <footer className="text-gray-600  dark:text-white bg-lightGray absolute w-full md:mt-16 pb-16 md:pb-0">
             <div className="container py-16 mx-auto flex md:items-center md:flex-row md:flex-nowrap flex-wrap flex-col">
                 <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
                     <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">

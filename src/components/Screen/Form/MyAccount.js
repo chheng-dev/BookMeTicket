@@ -3,7 +3,7 @@ import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import { BrowserView, IOSView, isMobile, MobileView } from "react-device-detect";
 import { Tabs, Input, Select, DatePicker, Space, Form, Button } from "antd";
-import { FiUser, FiShoppingCart, FiLogOut, FiLock, FiEye, FiEyeOff, FiPhone, FiMail } from "react-icons/fi";
+import { FiUser, FiShoppingCart, FiLogOut, FiLock, FiEye, FiClock, FiPhone, FiMail } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc"
 import TabPane from "antd/lib/tabs/TabPane";
 import NavLogo from "../../NavLogo";
@@ -230,9 +230,12 @@ const MyAccount = () => {
                                                 <div className="flex w-3/5">
                                                     <div className="w-full">
                                                         <span className="text-xs text-gray-500 block">Ticket No <span className="text-gray-700 font-semibold text-xs">12345678</span></span>
-                                                        <div className="text-gray-500 pry-1">
+                                                        <div className="text-gray-500 pry-1"> 
                                                             <span className="flex my-1">
-                                                                <FiCalendar /><span className="text-xs ml-2">26 Nov - 27 Nov 2022 | 9:00 AM</span>
+                                                                <FiCalendar /><span className="text-xs ml-2">26 Nov - 27 Nov 2022</span>
+                                                            </span>
+                                                            <span className="flex my-1">
+                                                                <FiClock /><span className="text-xs ml-2">9:00 AM</span>
                                                             </span>
                                                         </div>
                                                         <div>

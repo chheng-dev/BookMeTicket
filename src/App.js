@@ -14,21 +14,27 @@ import TestScreen from './components/Screen/TestScreen';
 import 'antd/dist/antd.css';
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 import MyAccount from './components/Screen/Form/MyAccount';
+import Preferences from './components/Preference';
+import { useState } from 'react';
 
 
 function App() {
+  const [token, setToken] = useState();
+  if (!token) {
+    return <Login setToken={setToken} />
+  }
   return (
     <div className="w-full h-full  dark:bg-gray-900">
-      
+
       <Switch>
         <Route exact path={'/'}>
-          <HomeScreen/>
+          <HomeScreen />
         </Route>
         <Route exact path="/event">
           <EventScreen />
         </Route>
         <Route path='/event/:id'>
-          <EventDetail/>
+          <EventDetail />
         </Route>
         <Route path='/guest-info/:id'>
           <GuestInfo />
@@ -51,7 +57,10 @@ function App() {
         <Route exact path='/register'>
           <Register />
         </Route>
-     
+        <Route path="/preferences">
+          <Preferences />
+        </Route>
+
         {/* <Route path='*'>
           <NotFound />
         </Route> */}
