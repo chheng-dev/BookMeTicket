@@ -11,15 +11,15 @@ import { Map, GoogleApiWrapper } from 'google-maps-react';
 import CurrencyFormat from 'react-currency-format';
 
 const EventDetail = (props) => {
-    const param = useParams();
+    const {id} = useParams();
     const [loading, setLoading] = useState(false)
-    console.log("param", param)
+    console.log("param", id)
     const [product, setProduct] = useState([]);
 
     const getProductDetail = async () => {
         try {
             setLoading(true)
-            const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`);
+            const respone = await fetch(`https://63b559c858084a7af39162c7.mockapi.io/ticketing/${id}`);
             const data = await respone.json();
             setProduct(data)
             setLoading(false)
@@ -48,9 +48,9 @@ const EventDetail = (props) => {
                 </div>
             </BrowserView>
             <div className="page-detail mx-auto rounded-2xl w-full h-full pt-16 bg-lightGray">
-                <div className="container mx-auto mt-4">
+                <div className="container mx-auto">
                     <img
-                        className="content-page-detail object-contain w-full md:rounded-t-xl "
+                        className="content-page-detail object-cover w-full md:rounded-t-xl "
                         src={product.image}
                         alt="thumbnail"
                         loading="lazy"

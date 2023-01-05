@@ -12,7 +12,7 @@ function Filter(props) {
     const getPosts = async () => {
         try {
             setLoading(true);
-            const respone = await fetch("https://fakestoreapi.com/products");
+            const respone = await fetch("https://63b559c858084a7af39162c7.mockapi.io/ticketing");
             const data = await respone.json();
             setPosts(data)
             setLoading(false)
@@ -150,12 +150,22 @@ function Filter(props) {
 
             </div>
             <div className={openTab === 1 ? "block" : "hidden"}>
-                <div className="grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4 2xl:grid 2xl:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4 2xl:grid 2xl:grid-cols-5 gap-4">
                     {
                         products.map((product, idx) => {
                             return (
-                                <div className=" h-full mx-auto dark:bg-gray-900 dark:text-white box-shadow hover:shadow-2xl rounded-lg " key={idx}>
-                                    <Cart id={product.id} title={product.title} image={product.image} description={product.description} price={product.price} />
+                                <div className=" h-full w-full mx-auto dark:bg-gray-900 dark:text-white box-shadow hover:shadow-2xl rounded-md " key={idx}>
+                                    <Cart
+                                        id={product.id}
+                                        slug={product.slug}
+                                        title={product.title}
+                                        image={product.image}
+                                        description={product.description}
+                                        price={product.price}
+                                        location={product.location}
+                                        avatar={product.avatar}
+                                        username={product.username}
+                                    />
                                 </div>
                             )
                         })

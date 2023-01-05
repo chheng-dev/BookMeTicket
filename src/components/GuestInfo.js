@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "../index.css"
 import { Link, useParams } from "react-router-dom"
 import Loading from "./Loading/Loading";
-import { FiPhone, FiLock, FiEyeOff, FiEye, FiLogOut,FiMail } from "react-icons/fi";
-import { Space, Input } from "antd";
+import { FiPhone, FiLock, FiEyeOff, FiEye, FiLogOut, FiMail } from "react-icons/fi";
+import { Space, Input, Form,Button } from "antd";
 import NavLogo from "./NavLogo";
 import { MobileView, BrowserView } from "react-device-detect";
 import NavbarBottom from "./NavBarBottom";
@@ -52,42 +52,62 @@ function GuestInfo() {
                         <div className="md:flex md:gap-4 justify-center center-center">
                             <div className="md:flex md:w-8/12 p-4 md:p-0">
                                 <div class="p-4 box-shadow w-full rounded-md md:py-8 bg-white">
-                                    <form className="">
-                                        <h3 className="text-gray-600 dark:text-white font-semibold text-2xl">Guest Information</h3>
-                                        <div className="relative mt-3 z-0 mb-3 w-full group">
-                                            <div className="mb-2">
-                                                <label className="text-gray-600 mb-4 font-normal">Phone Number</label>
-                                            </div>
+                                    <Form
+                                        layout="vertical"
+                                        initialValues={{
+                                            remember: true,
+                                        }}
+                                        autoComplete="off"
+                                    >
+                                        <h3 className="text-gray-600 dark:text-white font-semibold text-2xl">Guest InFormation</h3>
+                                        <Form.Item
+                                            label="Phone Number"
+                                            name="phoneNumber"
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message: 'Please input your phone number!',
+                                                },
+                                            ]}>
                                             <Input type="number" bordered addonBefore={<FiPhone />} placeholder="010 XXX XXXX" size="large" className="rounded-lg" />
-                                        </div>
-                                        <div className="relative mt-3 z-0 mb-3 w-full group">
-                                            <div className="mb-2">
-                                                <label className="text-gray-600 mb-4 font-normal">Email</label>
-                                            </div>
+                                        </Form.Item>
+                                        <Form.Item
+                                            label="Email"
+                                            name="email"
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message: 'Please input your email!',
+                                                },
+                                            ]}>
                                             <Input className="text-xs" addonBefore={<FiMail />} type="email" bordered placeholder="example@gmail.com" size="large" />
-                                        </div>
-                                        <div className="relative z-0 mb-3 w-full group">
-                                            <div className="mb-2">
-                                                <label className="text-gray-600 mb-4 font-normal">Password</label>
-                                            </div>
+                                        </Form.Item>
+                                        <Form.Item
+                                            label="Password"
+                                            name="password"
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message: 'Please input your password!',
+                                                },
+                                            ]}>
                                             <Input type="password" bordered placeholder="*********" addonBefore={<FiLock />} size="large" className="rounded-lg" iconRender={visible => (visible ? <FiEye /> : <FiEyeOff />)} />
-                                        </div>
+                                        </Form.Item>
                                         <div className="mt-6 text-center text-gray-400 text-xs">
                                             <p>By Check out, you have agreed with <span className="text-primaruy-600">terms and condition</span></p>
                                         </div>
                                         <div className="w-full h-full">
                                             <div className="pt-4">
                                                 <Link to={`/payment/${product.id}`}>
-                                                    <button className="bg-primary w-full py-3 text-white rounded hover:bg-primary-300 focus:bg-primary-600">
-
+                                                    <Button className="bg-primary" htmlType="submit" block size="large">
                                                         <Space>
                                                             <FiLogOut className="text-lg" />Check out
                                                         </Space>
-                                                    </button>
+                                                    </Button>
                                                 </Link>
                                             </div>
                                         </div>
-                                    </form>
+                                    </Form>
                                 </div>
                             </div>
                             <div className="md:flex md:w-4/12 p-4 md:p-0">
