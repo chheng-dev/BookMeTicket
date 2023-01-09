@@ -3,7 +3,7 @@ import Logo from '../images/logo.png';
 import { Link,NavLink } from "react-router-dom"
 // import Modal from "antd/lib/modal/Modal";
 import { FiHome,FiUser,FiGlobe } from "react-icons/fi";
-
+import Input from "antd/lib/input/Input";
 
 function NavbarBottom() {
 

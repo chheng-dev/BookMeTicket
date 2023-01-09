@@ -6,18 +6,18 @@ function Cart({ title, description, image, price, id,location,avatar,username,sl
         <>
             <Link to={`/event/${id}`}>
                 <img
-                    className="rounded-t-md rounded-b-md h-48 w-full object-cover"
+                    className="rounded-t-md rounded-b-md h-32 md:h-48 w-full object-cover"
                     src={image}
                     alt="thumbnail"
                     loading="lazy"
                 />
 
-                <div className="py-2 px-4">
+                <div className="py-2 px-2 md:px-4">
                     <h1
-                        className="text-lg font-medium leading-6 tracking-wide text-gray-300"
+                        className="text-lg font-medium leading-6 tracking-wide text-gray-300 "
                     >
                         <Link to={`/event/${id}`}>
-                            <span className="text-gray-700 dark:text-white md:text-sm line-clamp-1">
+                            <span className="text-gray-700 dark:text-white md:text-sm line-clamp-2">
                                 {title}
                             </span>
                         </Link>
@@ -31,11 +31,11 @@ function Cart({ title, description, image, price, id,location,avatar,username,sl
                         </span>
                     </div>
                     <div className="flex items-center">
-                        <span className="font-meduim md:text-lg text-red-700">${price}</span> <span className="font-normal text-gray-500 dark:text-white">/ Per Ticket</span>
+                        <span className="font-meduim md:text-lg text-gray-700">${price}</span> <span className="font-normal text-gray-500 dark:text-white ml-0.25"> <span className="ml-2">/ Per Ticket</span></span>
                     </div>
-                    <div className="flex my-3">
+                    <div className="flex mt-3 mb-1">
                         <div className="flex items-center">
-                            <img className="w-8 h-8 rounded-full ring ring-gray-800" src={avatar} />
+                            <img className="w-8 h-8 rounded-full" src={avatar} />
                             <span className="text-gray-500 ml-2 dark:text-white text-sm line-clamp-1">{username}</span>
                         </div>
                     </div>

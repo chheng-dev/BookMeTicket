@@ -3,6 +3,7 @@ import Category from "../Category";
 import Cart from "./Cart";
 import { Link, Outlet } from "react-router-dom"
 import Loading from "../Loading/Loading";
+import { Button } from "antd";
 
 function Filter(props) {
     const [openTab, setOpenTab] = useState(1);
@@ -38,114 +39,101 @@ function Filter(props) {
                 <button
                     type="button"
                     className="
-                rounded
-                px-4
-                py-1
-                md:px-6
-                md:py-2        
-                border border-gray-300
-                dark:text-white
-                focus:bg-primary-600
-                focus:text-white
-                text-gray-600
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700 
-                focus:outline-none focus:ring-0
-                transition
-                duration-150
-                ease-in-out
+                                            rounded
+                                            px-4
+                                            py-1
+                                            md:px-6
+                                            md:py-2        
+                                            border border-gray-300
+                                            text-gray-600
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            hover:bg-black hover:bg-opacity-5
+                                            focus:outline-none focus:ring-0
+                                            transition
+                                            duration-150
+                                            ease-in-out
             "
                     onClick={() => setOpenTab(1)}
                 >
-                    All
+                    Date
                 </button>
                 <button
                     type="button"
                     className="
-            rounded
-                 px-4
-                py-1
-                md:px-6
-                md:py-2    
-                border border-gray-300
-                dark:text-white
-                focus:bg-primary-600
-                focus:text-white
-                text-gray-600
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700
-                focus:outline-none focus:ring-0
-                transition
-                duration-150
-                ease-in-out
-                ml-2
-            "
+                                        rounded
+                                            px-4
+                                            py-1
+                                            md:px-6
+                                            md:py-2    
+                                            border border-gray-300
+                                            text-gray-600
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            hover:bg-black hover:bg-opacity-5
+                                            focus:outline-none focus:ring-0
+                                            transition
+                                            duration-150
+                                            ease-in-out
+                                            ml-2
+                                        "
                     onClick={() => setOpenTab(2)}
                 >
-                    Today
+                    Price
                 </button>
                 <button
                     type="button"
                     className="
-                rounded
-                 px-4
-                py-1
-                md:px-6
-                md:py-2    
-                border border-gray-300
-                dark:text-white
-                focus:bg-primary-600
-                focus:text-white
-                focus:border-0
-                text-gray-600
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700
-                focus:outline-none focus:ring-0
-                transition
-                duration-150
-                ease-in-out
-                ml-2
-            "
+                                            rounded
+                                            px-4
+                                            py-1
+                                            md:px-6
+                                            md:py-2    
+                                            border border-gray-300
+                                            text-gray-600
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            hover:bg-black hover:bg-opacity-5
+                                            focus:outline-none focus:ring-0
+                                            transition
+                                            duration-150
+                                            ease-in-out
+                                            ml-2
+                                        "
                     onClick={() => setOpenTab(3)}
                 >
-                    This Week
+                    Keyword
                 </button>
                 <button
                     type="button"
                     className="
-                rounded
-                 px-4
-                py-1
-                md:px-6
-                md:py-2    
-                border border-gray-300
-                dark:text-white
-                focus:bg-primary-600
-                focus:text-white
-                text-gray-600
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                hover:bg-black hover:bg-opacity-5 hover:border hover:border-gray-700
-                focus:outline-none focus:ring-0
-                transition
-                duration-150
-                ease-in-out
-                ml-2
-            "
+                                            rounded
+                                            px-4
+                                            py-1
+                                            md:px-6
+                                            md:py-2    
+                                            border border-gray-300
+                                            text-gray-600
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            hover:bg-black hover:bg-opacity-5
+                                            focus:outline-none focus:ring-0
+                                            transition
+                                            duration-150
+                                            ease-in-out
+                                            ml-2
+                                        "
                     onClick={() => setOpenTab(4)}
                 >
-                    This Month
+                    More Filters
                 </button>
 
             </div>
@@ -176,7 +164,7 @@ function Filter(props) {
             </div>
             <div className="w-full text-center my-8">
                 <Link to="/event">
-                    <button className="py-4 px-28 border border-primary rounded text-primary font-meduim">More event</button>
+                    <Button type="primary"size={'large'} className="w-64">More event</Button>
                 </Link>
             </div>
             {/* <Outlet /> */}

@@ -39,7 +39,7 @@ function App() {
         <Route path='/guest-info/:id'>
           <GuestInfo />
         </Route>
-        <Route path='/ticket'>
+        <Route path='/ticket/:id'>
           <Ticket />
         </Route>
         <Route path='/payment/:id'>

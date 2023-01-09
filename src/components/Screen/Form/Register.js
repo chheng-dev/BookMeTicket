@@ -108,7 +108,7 @@ function Register() {
                         // onChange={(e) => setCPassword(e.target.value)}
                         />
                     </Form.Item>
-                    <Button className="bg-primary" htmlType="submit" block size="large">
+                    <Button type="primary" htmlType="submit" block size="large">
                         Register
                     </Button>
                 </Form>
@@ -158,7 +158,7 @@ function Register() {
                         ]}>
                         <Input type="password" bordered placeholder="*********" addonBefore={<FiLock />} size="large" className="rounded-lg" iconRender={visible => (visible ? <FiEye /> : <FiEyeOff />)} />
                     </Form.Item>
-                    <Button className="bg-primary" htmlType="submit" block size="large">
+                    <Button type="primary" htmlType="submit" block size="large">
                         Register
                     </Button>
                 </Form>

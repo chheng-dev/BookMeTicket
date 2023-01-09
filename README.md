@@ -17,3 +17,7 @@ For detailed explanation on how things work, check out the [documentation](https
 
 # currency format
 # npmjs.com/package/react-currency-format
+
+
+# google react maps
+# https://www.npmjs.com/package/google-maps-react
