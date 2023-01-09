@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useParams,useState} from 'react';
 import { Carousel } from 'antd';
 import '../index.css'
 import bgCover1 from "../images/bg-banner.png"
@@ -18,9 +18,7 @@ function Header() {
                                         <span>From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</span>
                                         <div className='mt-4'>
                                             <Link to="/event">
-                                                <button className="bg-primary hover:bg-primary-700 text-white  py-2 px-12 rounded">
-                                                    Browse Event
-                                                </button>
+                                                <button className="py-4 px-16 bg-primary rounded-md text-white font-meduim">Browse event</button>
                                             </Link>
                                         </div>
                                     </div>
@@ -30,12 +28,12 @@ function Header() {
                     </div>
                     <div class="absolute top-0 right-0 block w-full h-screen md:h-full ">
                         <Carousel autoplay>
-                        <div className='w-full h-screen md:full '>
-                            <img alt="Snowy mountain lake" class="object-cover min-w-full h-full" src={bgCover1} />
-                        </div>
-                        <div className='w-full h-screen md:h-full'>
-                            <img alt="Snowy mountain lake" class="object-cover min-w-full h-full" src="https://d3lbfr570u7hdr.cloudfront.net/stadiumastro/media/sa-images/2022/09-september/1/astro-fifa-world-cup-qatar-sports-pack.png?ext=.png" />
-                        </div>
+                            <div className='w-full h-screen md:full '>
+                                <img alt="Snowy mountain lake" class="object-cover min-w-full h-full" src={bgCover1} />
+                            </div>
+                            <div className='w-full h-screen md:h-full'>
+                                <img alt="Snowy mountain lake" class="object-cover min-w-full h-full" src="https://d3lbfr570u7hdr.cloudfront.net/stadiumastro/media/sa-images/2022/09-september/1/astro-fifa-world-cup-qatar-sports-pack.png?ext=.png" />
+                            </div>
                         </Carousel>
                     </div>
                 </div>

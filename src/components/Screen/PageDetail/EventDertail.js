@@ -2,19 +2,21 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../Footer"
 import { Link, useParams } from "react-router-dom"
 import Loading from "../../Loading/Loading";
-import { FiShoppingCart } from "react-icons/fi";
-import { Space } from "antd";
+import { FiShoppingCart, FiNavigation } from "react-icons/fi";
+import { Button, Space, Affix } from "antd";
 import { BrowserView, MobileView } from "react-device-detect";
 import Navbar from "../../Navbar";
 import NavbarBottom from "../../NavBarBottom";
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper,Marker } from 'google-maps-react';
 import CurrencyFormat from 'react-currency-format';
 
+
 const EventDetail = (props) => {
-    const {id} = useParams();
+    const { id } = useParams();
     const [loading, setLoading] = useState(false)
     console.log("param", id)
     const [product, setProduct] = useState([]);
+    const [top, setTop] = useState(10);
 
     const getProductDetail = async () => {
         try {
@@ -47,10 +49,10 @@ const EventDetail = (props) => {
                     <Navbar />
                 </div>
             </BrowserView>
-            <div className="page-detail mx-auto rounded-2xl w-full h-full pt-16 bg-lightGray">
-                <div className="container mx-auto">
+            <div className=" mx-auto rounded-2xl w-full h-full pt-16 bg-page-deatil">
+                <div className="page-detail mx-auto py-8">
                     <img
-                        className="content-page-detail object-cover w-full md:rounded-t-xl "
+                        className="content-page-detail object-cover w-full md:rounded-t-xl md:rounded-b-xl"
                         src={product.image}
                         alt="thumbnail"
                         loading="lazy"
@@ -65,13 +67,10 @@ const EventDetail = (props) => {
                                 {product.title}
                             </h2>
                             <div className="w-full">
-                                <span className="flex">
-                                    <svg t="1670237581874" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2680" width="32" height="32">
-                                        <path d="M364.032 125.312a293.973333 293.973333 0 0 1 300.117333 2.474667C755.626667 184.618667 811.178667 286.08 810.666667 395.093333c-2.133333 108.373333-61.738667 210.304-136.234667 289.066667a799.018667 799.018667 0 0 1-143.274667 120.32 50.048 50.048 0 0 1-17.408 6.144 34.986667 34.986667 0 0 1-16.64-5.077333 789.973333 789.973333 0 0 1-206.464-194.005334A395.946667 395.946667 0 0 1 213.333333 389.717333c-0.042667-109.312 57.472-210.261333 150.698667-264.405333z m53.845333 309.674667a101.461333 101.461333 0 0 0 93.781334 63.872 99.797333 99.797333 0 0 0 71.808-29.909334c19.029333-19.370667 29.696-45.653333 29.610666-73.088a103.381333 103.381333 0 0 0-62.378666-95.701333 100.096 100.096 0 0 0-110.677334 22.186667 104.746667 104.746667 0 0 0-22.144 112.64z" fill="#cdcdcd" p-id="2681"></path>
-                                        <path d="M298.666667 896a213.333333 42.666667 0 1 0 426.666666 0 213.333333 42.666667 0 1 0-426.666666 0Z" fill="#1E2024" opacity=".4" p-id="2682"></path>
-                                    </svg>
-                                    <p className="ml-1 mt-2 text-md text-gray-400 dark:text-white">The Desk Flagship - Daun Penh</p>
-                                </span>
+                                <Space>
+                                    <FiNavigation className="text-xl text-gray-400" />
+                                    <p className="ml-1 mt-2 text-md text-gray-400 dark:text-white">{product.location}</p>
+                                </Space>
                             </div>
                             <div className="my-6">
                                 <h2 className="font-bold md:text-3xl text-xl dark:text-white">
@@ -115,15 +114,17 @@ const EventDetail = (props) => {
                                     <div className="rounded-md w-full" style={{ height: '300px', width: '100%', position: "relative" }}>
                                         <Map
                                             google={props.google}
-                                            zoom={14}
-                                            initialCenter={
-                                                {
-                                                    lat: 11.577827583472297,
-                                                    lng: 104.90598958105248
-
-                                                }
-                                            }
-                                        />
+                                            zoom={8}
+                                            initialCenter={{ lat: 47.444, lng: -122.176 }}
+                                        >
+                                            <Marker
+                                                key={product.id}
+                                                id={product.id}
+                                                lat={product.lat}
+                                                lng={product.lng}
+                                                onClick={() => console.log(product.lat, product.lng)}
+                                            />
+                                        </Map>
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +172,7 @@ const EventDetail = (props) => {
                                 </h2>
                                 <div className="flex">
                                     <div className="flex items-start py-6">
-                                        <img className="w-16 h-16 rounded-full object-cover mr-4 box-shadow" src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="avatar" />
+                                        <img className="w-16 h-16 rounded-full object-cover mr-4 box-shadow" src={product.avatar} alt="avatar" />
                                         <div className="">
                                             <div className="flex items-center justify-between">
                                                 <h2 className="text-lg font-semibold text-gray-900 -mt-1 dark:text-white">Techo Startup Center </h2>
@@ -191,49 +192,55 @@ const EventDetail = (props) => {
 
                         </div>
                     </div>
-                    <div className="md:flex md:w-1/2 lg:flex lg:w-1/3 justify-end  bg-white dark:bg-gray-900 h-full">
-                        <div className="w-full box-shadow p-4 rounded-lg">
-                            <div className="flex gap-4">
-                                <div className="flex w-1/3 justify-start items-center">
-                                    <span>Price</span>
+                    <div className="md:flex md:w-1/2 lg:flex lg:w-1/3 justify-end dark:bg-gray-900 h-full">
+                        <Affix offsetTop={70} className="w-full">
+                            <div className="w-full box-shadow bg-white p-4 rounded-md">
+
+                                <div className="flex gap-4">
+                                    <div className="flex w-1/3 justify-start items-center">
+                                        <span>Price</span>
+                                    </div>
+                                    <div className="flex w-2/3 justify-end items-center">
+                                        <span >
+                                            <CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} prefix={'$'} className="font-bold text-xl" />
+                                            <span className="text-sm font-normal">/ Per Ticket</span>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className="flex w-2/3 justify-end items-center">
-                                    <span >
-                                        {/* ${product.price} */}
-                                        <CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} prefix={'$'} className="font-bold text-xl" />
-                                        <span className="text-sm font-normal">/ Per Ticket</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="flex gap-4 mt-4">
-                                <div className="flex w-1/2 justify-start items-center">
-                                    <span>Quantity</span>
-                                </div>
-                                <div className="flex w-1/2 justify-end items-center">
-                                    <div className="custom-number-input h-10 w-32">
-                                        <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-                                            <button data-action="decrement" className=" bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                                <span className="m-auto text-2xl font-thin">−</span>
-                                            </button>
-                                            <input type="number" className=" focus:outline-none text-center w-full bg-gray-200 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                                            <button data-action="increment" className="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                                <span className="m-auto text-2xl font-thin">+</span>
-                                            </button>
+                                <div className="flex gap-4 mt-4">
+                                    <div className="flex w-1/2 justify-start items-center">
+                                        <span>Quantity</span>
+                                    </div>
+                                    <div className="flex w-1/2 justify-end items-center">
+                                        <div className="custom-number-input h-10 w-32">
+                                            <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                                <button data-action="decrement" className=" bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                                    <span className="m-auto text-2xl font-thin">−</span>
+                                                </button>
+                                                <input type="number" className=" focus:outline-none text-center w-full bg-gray-200 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                                                <button data-action="increment" className="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                                    <span className="m-auto text-2xl font-thin">+</span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div className="w-full mt-6">
+                                    <Link to={`/guest-info/${product.id}`}>
+                                        <Button type="primary" size="large" block>
+                                            <Space>
+                                                <FiShoppingCart className="text-lg" />
+                                                Buy Ticket
+                                            </Space>
+                                        </Button>
+                                    </Link>
+                                </div>
+
                             </div>
-                            <div className="w-full my-6">
-                                <Link to={`/guest-info/${product.id}`}>
-                                    <button className="bg-primary w-full py-4 text-white rounded hover:bg-primary-300 focus:bg-primary-600">
-                                        <Space>
-                                            <FiShoppingCart className="text-lg" />
-                                            Buy Ticket
-                                        </Space>
-                                    </button>
-                                </Link>
-                            </div>
-                        </div>
+                        </Affix>
+
+
+
                     </div>
                 </div>
             </div>

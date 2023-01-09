@@ -69,7 +69,7 @@ export default function Login({ setToken }) {
                         ]}>
                         <Input type="password" bordered placeholder="*********" addonBefore={<FiLock />} size="large" className="rounded-lg" iconRender={visible => (visible ? <FiEye /> : <FiEyeOff />)} />
                     </Form.Item>
-                    <Button className="bg-primary" htmlType="submit" block size="large">
+                    <Button type="primary" htmlType="submit" block size="large">
                         Login
                     </Button>
                     {/* <div className="">
@@ -83,19 +83,45 @@ export default function Login({ setToken }) {
     const EmailContent = () => {
         return (
             <>
-                <div className="relative mt-3 z-0 mb-3 w-full group">
-                    <div className="mb-2">
-                        <label className="text-gray-600 mb-4 font-normal">Email</label>
-                    </div>
-                    <Input className="text-xs" addonBefore={<FiMail />} type="email" bordered placeholder="example@gmail.com" size="large" />
-                </div>
-                <div className="relative z-0 mb-3 w-full group">
-                    <div className="mb-2">
-                        <label className="text-gray-600 mb-4 font-normal">Password</label>
-                    </div>
-                    <Input type="password" bordered addonBefore={<FiLock />} placeholder="*********" size="large" className="rounded-lg" />
-                </div>
+                <Form
+                    layout="vertical"
+                    initialValues={{
+                        remember: true,
+                    }}
+                    autoComplete="off"
+                    form={form}
+                    onFinish={handleSubmit}
+                >
+                    <Form.Item
+                        label="Email"
+                        name="email"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please input your email!',
+                            },
+                        ]}>
+                        <Input className="text-xs" addonBefore={<FiMail />} type="email" bordered placeholder="example@gmail.com" size="large" />
+                    </Form.Item>
+                    <Form.Item
+                        label="Password"
+                        name="password"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please input your password!',
+                            },
+                        ]}>
+                        <Input type="password" bordered placeholder="*********" addonBefore={<FiLock />} size="large" className="rounded-lg" iconRender={visible => (visible ? <FiEye /> : <FiEyeOff />)} />
+                    </Form.Item>
+                    <Button type="primary" htmlType="submit" block size="large">
+                        Login
+                    </Button>
+                    {/* <div className="">
+                    <button className="btn-secondary text-lg rounded-md">Send verification code</button>
+                </div> */}
 
+                </Form>
             </>
         )
     }

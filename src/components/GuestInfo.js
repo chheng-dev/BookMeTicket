@@ -3,12 +3,13 @@ import "../index.css"
 import { Link, useParams } from "react-router-dom"
 import Loading from "./Loading/Loading";
 import { FiPhone, FiLock, FiEyeOff, FiEye, FiLogOut, FiMail } from "react-icons/fi";
-import { Space, Input, Form,Button } from "antd";
+import { Space, Input, Form, Button, Modal } from "antd";
 import NavLogo from "./NavLogo";
 import { MobileView, BrowserView } from "react-device-detect";
 import NavbarBottom from "./NavBarBottom";
 import Footer from "./Footer";
 import CurrencyFormat from "react-currency-format";
+import { BsCashCoin } from "react-icons/bs";
 
 
 
@@ -21,7 +22,7 @@ function GuestInfo() {
     const getProductDetail = async () => {
         try {
             setLoading(true)
-            const respone = await fetch(`https://fakestoreapi.com/products/${param.id}`, {});
+            const respone = await fetch(`https://63b559c858084a7af39162c7.mockapi.io/ticketing/${param.id}`, {});
             const data = await respone.json();
             setProduct(data)
             setLoading(false)
@@ -93,13 +94,11 @@ function GuestInfo() {
                                             ]}>
                                             <Input type="password" bordered placeholder="*********" addonBefore={<FiLock />} size="large" className="rounded-lg" iconRender={visible => (visible ? <FiEye /> : <FiEyeOff />)} />
                                         </Form.Item>
-                                        <div className="mt-6 text-center text-gray-400 text-xs">
-                                            <p>By Check out, you have agreed with <span className="text-primaruy-600">terms and condition</span></p>
-                                        </div>
+                                        
                                         <div className="w-full h-full">
-                                            <div className="pt-4">
+                                            <div className="pt-1">
                                                 <Link to={`/payment/${product.id}`}>
-                                                    <Button className="bg-primary" htmlType="submit" block size="large">
+                                                    <Button type="primary" htmlType="submit" block size="large" className="py-4">
                                                         <Space>
                                                             <FiLogOut className="text-lg" />Check out
                                                         </Space>
@@ -110,14 +109,14 @@ function GuestInfo() {
                                     </Form>
                                 </div>
                             </div>
-                            <div className="md:flex md:w-4/12 p-4 md:p-0">
+                            <div className="md:flex md:w-4/12 h-full p-4 md:p-0">
                                 <div className="p-4 w-full dark:text-white box-shadow bg-white rounded-md">
                                     <div className="flex gap-4">
-                                        <div className="flex h-full w-1/2 bg-lightGray">
-                                            <img className="object-contain h-32 rounded-lg w-full" src={product.image} />
+                                        <div className="flex h-full w-1/2 ">
+                                            <img className="object-cover h-32 rounded-lg w-full" src={product.image} />
                                         </div>
                                         <div className="flex w-1/2">
-                                            <h6 className="text-md line-clamp-2 dark:text-white">{product.title}</h6>
+                                            <h6 className="text-lg line-clamp-2 dark:text-white">{product.title}</h6>
                                             {/* <span>26 Nov - 27 Nov 2022 | 9:00 AM</span> */}
                                         </div>
                                     </div>
@@ -145,13 +144,16 @@ function GuestInfo() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="my-3 border-b pb-3 border-gray-300">
+                                    <div className="my-3">
                                         <div className="flex gap-2">
                                             <div className="flex w-1/2 justify-start items-center">
-                                                <span>Total Price</span>
+                                            <Space>
+                                                <svg t="1673257721430" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="21787" width="1.25rem" height="1.25rem"><path d="M864 896H32c-19.2 0-32-12.8-32-32V288c0-19.2 12.8-32 32-32h832c19.2 0 32 12.8 32 32v576c0 19.2-12.8 32-32 32zM64 832h768V320H64v512z" fill="#707070" p-id="21788"></path><path d="M448 768c-70.4 0-128-51.2-128-112 0-19.2 12.8-32 32-32s32 12.8 32 32c0 25.6 28.8 48 64 48s64-22.4 64-48c0-22.4-25.6-48-64-48-70.4 0-128-48-128-112 0-60.8 57.6-112 128-112s128 51.2 128 112c0 19.2-12.8 32-32 32s-32-12.8-32-32c0-25.6-28.8-48-64-48s-64 22.4-64 48 28.8 48 64 48c70.4 0 128 51.2 128 112S518.4 768 448 768z" fill="#707070" p-id="21789"></path><path d="M448 441.6c-19.2 0-32-12.8-32-32V384c0-19.2 12.8-32 32-32s32 12.8 32 32v25.6c0 19.2-12.8 32-32 32zM448 800c-19.2 0-32-12.8-32-32v-25.6c0-19.2 12.8-32 32-32s32 12.8 32 32v25.6c0 19.2-12.8 32-32 32z" fill="#707070" p-id="21790"></path><path d="M992 800c-19.2 0-32-12.8-32-32V192H128c-19.2 0-32-12.8-32-32s12.8-32 32-32h864c19.2 0 32 12.8 32 32v608c0 19.2-12.8 32-32 32z" fill="#707070" p-id="21791"></path></svg>
+                                                Total Price
+                                            </Space>
                                             </div>
                                             <div className="flex w-1/2 justify-end items-center">
-                                                <CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                                                <CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} prefix={'$'} className="font-semibold text-lg" />
                                             </div>
                                         </div>
                                     </div>
