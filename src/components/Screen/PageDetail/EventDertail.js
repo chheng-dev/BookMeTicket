@@ -59,7 +59,7 @@ const EventDetail = (props) => {
                     />
                 </div>
             </div>
-            <div className="page-detail mx-auto mt-4 p-4 md:p-0 dark:text-white bg-lightGray-50">
+            <div className="page-detail mx-auto mt-4 p-4 md:p-4 xl:p-0 dark:text-white bg-lightGray-50">
                 <div className="grid grid-cols-1 md:flex lg:flex lg:gap-24">
                     <div className="md:flex md:w-1/2 lg:flex lg:w-2/3 min-h-screen justify-start">
                         <div className="w-full">
@@ -193,7 +193,7 @@ const EventDetail = (props) => {
                         </div>
                     </div>
                     <div className="md:flex md:w-1/2 lg:flex lg:w-1/3 justify-end dark:bg-gray-900 h-full">
-                        <Affix offsetTop={70} className="w-full">
+                        <Affix offsetTop={80} className="w-full">
                             <div className="w-full box-shadow bg-white p-4 rounded-md">
 
                                 <div className="flex gap-4">

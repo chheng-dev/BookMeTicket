@@ -58,10 +58,10 @@ function EventScreen(props) {
             </BrowserView>
             <div className="md:overflow-y-hidden md:event-h-screen mt-24 md:pt-0 md:mt-0">
                 <div className="container">
-                    <div className="p-4 md:p-0 md:overflow-hidden w-screen lg:event-h-screen ">
+                    <div className="p-4 md:p-0 md:overflow-hidden w-screen lg:event-h-screen h-full">
                         <div className="lg:flex grid grid-cols-1 md:grid md:grid-cols-1 h-full gap-4 event-h-screen">
-                            <div className="md:p-4 lg:flex lg:w-2/3 lg:overflow-x-hidden lg:overflow-y-auto pb-16 md:pb-0">
-                                <div className="w-full pb-32">
+                            <div className="md:p-4 lg:flex lg:w-2/3 lg:overflow-x-hidden lg:overflow-y-auto pb-4 md:pb-0">
+                                <div className="w-full pb-16">
                                     <div className=" inline-flex mb-4" role="group">
                                         <button
                                             type="button"
